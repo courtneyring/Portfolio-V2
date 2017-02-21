@@ -49,8 +49,8 @@ if($('.navbar').length > 0){
 
 //HTML Includes for Modal Content
 $(function(){
-        $("#example1").load("/~cering/includes/modal1.html");
-        $("#example2").load("/~cering/includes/modal2.html"); 
+        $("#example1").load("/~cering/portfolio-V2/includes/modal1.html");
+        $("#example2").load("/~cering/portfolio-V2/includes/modal2.html"); 
 });
 
 
