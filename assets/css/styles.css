@@ -81,7 +81,7 @@ body{
 }
 
 .technical{
-    background-image: url(/assets/images/technical-01-01.jpg);
+    background-image: url(/~cering/assets/images/technical-01-01.jpg);
     background-size: cover;
     height: 100%;
 }
@@ -92,7 +92,7 @@ body{
 }
 
 .creative{
-    background-image: url(/assets/images/test4-01.jpg);
+    background-image: url(/~cering/assets/images/test4-01.jpg);
     background-size: cover;
     height: 100%;
 }
@@ -112,7 +112,7 @@ body{
 /*About Section*/
 
 #about{
-    background: url(/assets/images/testt3.jpg) 90% 13%/cover no-repeat fixed;
+    background: url(/~cering/assets/images/testt3.jpg) 90% 13%/cover no-repeat fixed;
 }
 
 @media(min-width:992px){
@@ -190,12 +190,12 @@ body{
 }
 
 .portfolio-images>a{
-    background: url(/assets/images/creative1.jpg) center/cover no-repeat;
+    background: url(/~cering/assets/images/creative1.jpg) center/cover no-repeat;
     height:250px;
 }
 
 #floorcast{
-    background: url(/assets/images/floorcast-logo.jpg) center/cover no-repeat;
+    background: url(/~cering/assets/images/floorcast-logo.jpg) center/cover no-repeat;
 
 }
 
