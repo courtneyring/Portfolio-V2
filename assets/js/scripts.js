@@ -49,8 +49,10 @@ if($('.navbar').length > 0){
 
 //HTML Includes for Modal Content
 $(function(){
-        $("#example1").load("/~cering/portfolio-V2/includes/modal1.html");
-        $("#example2").load("/~cering/portfolio-V2/includes/modal2.html"); 
+        $("#hongkongInclude").load("/includes/hongkong.html");
+        $("#cchsInclude").load("/includes/cchs.html"); 
+        $("#medicareInclude").load("/includes/medicare.html"); 
+        $("#ifpInclude").load("/includes/ifp.html"); 
 });
 
 

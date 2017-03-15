@@ -7,9 +7,9 @@
         <title>Courtney Ring | Marketing Technologist</title>
 
         <!--Stylesheets-->
-        <link rel="stylesheet" href="/~cering/portfolio-V2/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/~cering/portfolio-V2/assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/~cering/portfolio-V2/assets/css/styles.css">
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
       
@@ -51,29 +51,39 @@
     <div class="container-fluid">
         <!-- Landing Page -->
         <div class="row landing">
+
             <div class="col-6 creative">
                 <div class="row align-items-center  text-right">
                     <div class="col-12">
-                        <h1>Test1</h1>
+                        
+                       
                     </div>
                 </div>
             </div>
             <div class="col-6 technical">
                 <div class="row align-items-center  text-left">
                     <div class="col-12">
-                        <h1>Test1</h1>
+                       
                     </div>
                 </div>
             </div>
-
+            <div class="col-12 col-lg-8 offset-lg-2 text-center wording">
+                <h1><span>Marketing Technologist<br></span></h1>
+                <h2><span>mar·ket·ing tech·nol·o·gist</span></h2>
+                <h2><span><i> /ˈmärkədiNG tekˈnäləjəst/ noun</i></span></h2>
+                <h2><span>
+                        def: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis.
+                    </span>
+                </h2>
             </div>
+        </div>
 
         <!-- About Page -->
-        <div class="row section" id="about">
+        <div class="row section about" id="about">
             <div class="col-12 header">
                 <h2>About</h2>
             </div>
-            <div class="col-11 col-offset-1 offset-sm-4 col-sm-7">
+            <div class="col-12 offset-sm-4 col-sm-7">
                 <div class="about-blurb">
                     <h3 class="about-headline">I am a
                       <span
@@ -89,12 +99,12 @@
         </div>
 
         <!-- Skills Page -->
-        <div class="row section skills" id="skills">
+        <div class="row section skills" id="skills" class="skills">
             <div class="col-12 header">
                 <h2>Skill</h2>
             </div>
 
-            <div class="col-12 col-sm-3 skill-section">
+            <div class="col-12 col-sm-3 offset-sm-2 skill-section">
                  <span class="fa fa-file-text-o"></span>
                 <h3>Content</h3>
                 <hr>
@@ -104,7 +114,7 @@
                     <li>Copywriting for mobile</li>
                 </ul>
             </div>
-            <div class="col-12 col-sm-3 skill-section">
+            <div class="col-12 col-sm-3 offset-sm-1 skill-section">
                  <span class="fa fa-paint-brush"></span>
                 <h3>Design</h3>
                 <hr>
@@ -114,7 +124,7 @@
                     <li>Usability Testing</li>
                 </ul>
             </div>
-            <div class="col-12 col-sm-3 skill-section">
+            <div class="col-12 col-sm-3 offset-sm-2 skill-section">
                 <span class="fa fa-line-chart"></span>
                 <h3>Data</h3>
                 <hr>
@@ -123,7 +133,7 @@
                     <li></li>
                 </ul>
             </div>
-            <div class="col-12 col-sm-3 skill-section">
+            <div class="col-12 col-sm-3 offset-sm-1 skill-section">
                 <span class="fa fa-code"></span>
                 <h3>Development</h3>
                 <hr>
@@ -136,29 +146,138 @@
         </div>
 
         <!-- Portfolio Page -->
-        <div class="row section" id="portfolio">
+        <div class="row section portfolio" id="portfolio">
             <div class="col-12 header">
                 <h2>Portfolio</h2>
             </div>
             <div class="row portfolio-images">
-                <a href="#exampleModal1" class="col-12 col-sm-4" id="floorcast" data-toggle="modal"></a>
-                <a href="#exampleModal2" class="col-12 col-sm-4" data-toggle="modal"></a>
-                <a href="#" class="col-12 col-sm-4"></a>
-                <a href="#" class="col-12 col-sm-4"></a>
-                <a href="#" class="col-12 col-sm-4"></a>
-                <a href="#" class="col-12 col-sm-4"></a>
+
+                <a href="#exampleModal1" class="col-12 col-sm-6 project" id="floorcast" data-toggle="modal">
+                    <div class="overlay align-items-center justify-content-center">
+                        <h3 class="text text-center">FloorCast<br>
+                            <i>Web Application</i>                        
+                        </h3>
+                    </div>
+                </a>
+                <a href="#cchsModal" class="col-12 col-sm-6 project" id="cchs" data-toggle="modal">
+                    <div class="overlay">
+                        <h3 class="text text-center">Crawford County Historical Society<br>
+                            <i>Website</i>                        
+                        </h3>
+                    </div>
+                </a>
+                <a href="#hongkongModal" class="col-12 col-sm-6 project" id="hongkong" data-toggle="modal">
+                    <div class="overlay">
+                        <h3 class="text text-center">Cigna Hong Kong<br>
+                            <i>CMS Project</i>                        
+                        </h3>
+                    </div>
+                </a>
+                <a href="#ifpModal" class="col-12 col-sm-6 project" id="ifp" data-toggle="modal">
+                    <div class="overlay">
+                        <h3 class="text text-center">Cigna Individual and Family Plans<br>
+                            <i>Digital Marketing Project</i>                        
+                        </h3>
+                    </div>
+                </a>
+                <a href="#medicareModal" class="col-12 col-sm-6 project" id="medicare" data-toggle="modal">
+                    <div class="overlay">
+                        <h3 class="text text-center">Cigna Medicare<br>
+                            <i>Plan Finder Application</i>                        
+                        </h3>
+                    </div>
+                </a>
+                <a href="#" class="col-12 col-sm-6 project">
+                    <div class="overlay">
+                        <h3 class="text text-center">Crawford County Historical Society<br>
+                            <i>Website</i>                        
+                        </h3>
+                    </div>
+                </a>
             </div>
         </div>
-        <div id="example1"></div>
-        <div id="example2"></div>
+        <div id="hongkongInclude"></div>
+        <div id="cchsInclude"></div>
+        <div id="ifpInclude"></div>
+        <div id="medicareInclude"></div>
+        
+        <!--Testimonials-->
+        <div id="testimonials" class="testimonials row section">
+            <div class="col-12 header">
+                <h2>Testimonials</h2>
+            </div>
+            <div class="col-12 col-sm-8 offset-sm-2">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        
+                        <div class="carousel-item active">
+                            <p>Courtney consistently produced timely and quality deliverables, often prior to deadline. She often sought feedback in regards to her performance and was very receptive to acting on what was discussed. Most significantly she was given a design tool which she acknowledged having had no prior experience with, and within hours was able to contribute to and enhance the existing designs.<br><br>
+                            -Michael Pritz, Cigna Architecture Manager</p>
 
+                        </div>
+                        <div class="carousel-item">
+                            <p>She tackled each task in an efficient and orderly manner, and never hesitated to ask for more work once a project was completed. Courtney will be an asset to any employer, and I am confident she will rise to any task you place in front of her and attack it with full force.<br><br>-Candace Hunerberg, Perich Advertising + Design Account Director</p>
+
+                        </div>
+                        <div class="carousel-item">
+                            <p>[...] her work ethic, commitment to her duties, and her high level of expertise and willingness to learn is unmatched by any interns that I have mentored over the years. She is an excellent employee in every way, and is a pleasure to be around because of her professionalism.<br><br> -Mark McDowell, MPRO Director of Marketing and Public Relations</p>
+
+                        </div>
+                        <div class="carousel-item">
+                            <p>As director of the Marketing internship program, I was very impressed by Courtney’s professionalism and enthusiasm to learn. As part of the Social Media team, she took great initiative in owning discrete pieces of work for presentations with senior leadership.<br><br> -Melissa Teitler, Cigna Director of Customer Experience</p>
+
+                        </div>
+                        <div class="carousel-item">
+                            <p>She worked with multiple teams within our organization and did excellent work. She accepted all assignments eagerly, and consistently completed them according to the established timelines.<br><br> -Jacqueline Rosenblatt, MPRO Senior Director of Corporate Growth and Development</p>
+
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        
+        </div>
         <!-- Contact Page -->
-        <div id="contact" class="row section">
+        <div id="contact" class="contact row section">
             <div class="col-12 header">
                 <h2>Contact</h2>
             </div>
-            <div class="col-sm-6 offset-sm-1 form-column">
-                <form role="form" method="post" onsubmit="successMessage()"action="mailer.php">
+            <div class="col-12 text-center">
+                <h2>Shoot me a Message</h2>
+            </div>
+            <div class="col-12 col-sm-2 offset-sm-3 info">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4>West Hartford, CT</h4>
+            </div>
+            <div class="col-12 col-sm-2 info">
+                <a href="mailto:hello@courtney-ring.com" target="_blank">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                </span>
+
+                <h4>hello@courtney-ring.com</h4></a>
+            </div>
+            <div class="col-12 col-sm-2 info">
+                <a href="http://www.linkedin.com/courtneyring710" target="_blank">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4>courtneyring710</h4></a>
+            </div>
+            <div class="col-12 col-sm-6 offset-sm-3 form-column">
+                <form role="form" method="post" onsubmit="successMessage()"ac2tion="mailer.php">
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" class="form-control" name="name" id="name">
@@ -171,12 +290,15 @@
                         <label for="message">Message:</label>
                         <textarea name="message" class="form-control" rows="5" id="message"></textarea>
                     </div>
-                    <input type="submit" name="submit" id="submit" class="btn btn-default" value="Send">
+                    <input type="submit" name="submit" id="submit" class="submit" value="Send">
                 </form>
             </div>
-            <div class="col-sm-4">
-                <p>Email:</p>
-            </div>
+
+        </div>
+        
+        <!--Footer-->
+        <div id="footer" class="footer row section">
+            <p>©2017 Courtney Ring</p>
         </div>
         
     </div>
@@ -187,9 +309,9 @@
     
     <!--Scripts-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="/~cering/portfolio-V2/assets/js/tether.min.js"></script>
-    <script type="text/javascript" src="/~cering/portfolio-V2/assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/~cering/portfolio-V2/assets/js/scripts.js"></script>
+    <script type="text/javascript" src="/assets/js/tether.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/scripts.js"></script>
     
 </body>
 </html>
