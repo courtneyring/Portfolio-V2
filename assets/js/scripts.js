@@ -1,4 +1,4 @@
-//Smoothscroll Function
+//--------Smoothscroll Function---------//
 $("nav ul li a[href^='#']").on('click', function(e) {
 
    e.preventDefault();
@@ -28,7 +28,7 @@ $("nav ul li a[href^='#']").on('click', function(e) {
 });
 
 
-//Navbar color change
+//---------Navbar color change-------//
 function checkScroll(){
     var startY = $('.navbar').height() * 4; 
 
@@ -46,15 +46,7 @@ if($('.navbar').length > 0){
 }
 
 
-
-//HTML Includes for Modal Content
-$(function(){
-        $("#example1").load("/includes/modal1.html");
-        $("#example2").load("/includes/modal2.html"); 
-});
-
-
-//Text Rotate
+//------------Text Rotate-----------//
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -105,9 +97,62 @@ window.onload = function() {
       new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
   }
-  // INJECT CSS
+
   var css = document.createElement("style");
   css.type = "text/css";
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
+
+
+
+//-----------Portfolio Modal Data--------//
+$(function(){
+    
+    var data = {}
+    
+    $.getJSON("/assets/json/portfolio.json", function(json) {
+        data = json;
+    });
+    
+    $(".project").on('click',function(){
+        
+        var key = this.id;
+        var id = this.getAttribute("href").replace('#','');
+        $(".modalPortfolio").attr("id",id);
+        
+        var aria = this.href.replace('#','');
+        $(".modalPortfolio").attr("aria-labelledby",aria);
+        
+        var image = data[key].image;
+        //$(".modalPortfolio .modal-body .image").css("background","url("+image+") center/cover no-repeat");
+        $(".modalPortfolio .modal-body img").attr('src', image);
+        
+        
+        var title = data[key].title;
+        $(".modalPortfolio .modal-header .title").text(title);
+        
+        var desc = data[key].description;
+        $(".modalPortfolio .modal-body .description").text(desc);
+        
+        var company = data[key].company;
+        $(".modalPortfolio .modal-body .company").text(company);
+        
+        var skills = data[key].skills;
+        $(".modalPortfolio .modal-body .skills").text(skills);
+        
+        var date = data[key].date;
+        $(".modalPortfolio .modal-body .date").text(date);
+        
+        var website = data[key].website;
+        $(".modalPortfolio .modal-body .website").text(website);
+        
+        //var test = $(".modal.portfolio");
+        //console.log(test);
+        //console.log(data[key].projectName);
+
+    });
+})
+
+
+
