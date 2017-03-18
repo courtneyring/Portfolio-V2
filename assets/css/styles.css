@@ -19,8 +19,21 @@ h3{
     font-size:2.6rem;
 }
 
+h4{
+    font-size: 2.3rem;
+}
+
+h5{
+    font-size:2rem;
+    line-height:3rem;
+}
+
 p, li, body{
     font-size:2rem;
+}
+
+a:focus{
+    outline: 0 !important;
 }
 
 
@@ -64,17 +77,17 @@ p, li, body{
 
 
 body{
-    margin-top:-67px;
+    margin-top:-6.7rem;
 }
 
 @media(min-width:992px){
     body{
-        margin-top:-100px;
+        margin-top:-10rem;
     }
 }
 
 .navbar {
-    padding:7px;  
+    padding:.7rem;  
     background: rgba(49, 49, 49, 1);
     
 }
@@ -97,27 +110,27 @@ body{
 
 .navbar .navbar-collapse ul li a{
     color:white;
-    font-size:26px;
+    font-size:2.6rem;
 }
 
 
 .navbar-brand>img{
-    height:45px;
+    height:4.5rem;
 }
 
 @media(min-width:992px){
     .navbar-brand>img{
-        height:76px;
+        height:7.6rem;
     }
 }
 
 .navbar-toggler{
-    margin-top:8px;
+    margin-top:.8rem;
 }
 
 .navbar-toggler>span{
     color:white;
-    font-size:22px;
+    font-size:2.2rem;
 }
 
 .landing{
@@ -156,16 +169,16 @@ body{
 }
 
 .section{
-    padding-bottom:60px;
+    padding-bottom:6rem;
 }
 
 .section .header{
-    padding:25px 25px;
+    padding:2.5rem 2.5rem;
 }
 
 @media(min-width:767px){
     .section .header{
-        padding:25px 50px;
+        padding:2.5rem 5rem;
     }
 }
 
@@ -195,19 +208,19 @@ body{
 .about-blurb{
     color:white;
     background-color:rgba(52, 52, 52, 0.55);
-    padding:10px;
-    box-shadow: 0px 0px 45px rgba(52, 52, 52, 1);
-    border-radius: 7px;
+    padding:1rem;
+    box-shadow: 0rem 0rem 4.5rem rgba(52, 52, 52, 1);
+    border-radius: .7rem;
 }
 
 /*Skills Section*/
 .skill-section:nth-of-type(2), .skill-section:nth-of-type(3){
-    margin-top:40px;
+    margin-top:4rem;
 }
 
 .skill-section:nth-of-type(4), .skill-section:nth-of-type(5){
-    margin-top:100px;
-    margin-bottom:50px;
+    margin-top:10rem;
+    margin-bottom:5rem;
 }
 
 .skills h2{
@@ -219,8 +232,8 @@ body{
 }
 
 .skill-section hr{
-    margin-left:40px;
-    margin-right:40px;
+    margin-left:4rem;
+    margin-right:4rem;
 }
 
 .skill-section ul{
@@ -230,11 +243,11 @@ body{
 }
 
 .skill-section .fa{
-    font-size: 30px;
-    margin-bottom: 15px;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
     color: white;
     background-color: #44839A;
-    padding: 15px;
+    padding: 1.5rem;
     border-radius: 4rem;
 }
 
@@ -266,8 +279,9 @@ body{
 
 .portfolio-images>a{
     background: url(/assets/images/creative1.jpg) center/cover no-repeat;
-    height:315px;
-        border: 12px solid #313131;
+    height:38.9rem;
+    max-width:55.2rem;
+    border: 1.2rem solid #313131;
 }
 
 .overlay {
@@ -321,7 +335,7 @@ body{
     min-width: 100%;
     height: 100%;
     margin: 0;
-    padding: 12px;
+    padding: 1.2rem;
 }
 
 .modal-content{    
@@ -330,23 +344,52 @@ body{
     width: 100%;
     min-width: 100%;
     border-radius: 0;
+    background-color:#313131;
+    color:white;
 }
 
-.modal .carousel-inner{
-    width:80%;
+.modal-body img{
+    width:100%;
+   /* height:100%;*/
+}
+
+.modal-header{
+    border-bottom:0px;
+    color:white;
+}
+
+.modal-header .title{
     margin:0 auto;
-    height:80vh;
+    border-bottom: 2px solid rgb(255,255,255);
+    font-size:4rem;
+    padding: 0 18%;
 }
 
-.modal .carousel-inner .text{
-    transform:translateY(25%);
+.modal-body .description{
+    margin-top:3rem;
 }
 
-.modal .fa-close, .modal .fa-chevron-right, .modal .fa-chevron-left{
-    font-size:36px;
-    margin-right:25px;
-    color:black;
+.modal-body .specs{
+    margin-top:5rem;
 }
+
+.modal-body td:nth-child(2){
+    padding-left:4rem;
+}
+
+.modal-header button{
+    opacity:1;
+}
+
+.modal-header button:hover{
+    opacity:0.5;
+}
+
+.modal .fa{
+    color:white;
+    font-size:3.6rem;
+}
+
 
 /*Testimonials Section*/
 .testimonials{
@@ -373,15 +416,22 @@ body{
     background-color:white;
 }
 
-.contact a{
+.contact .info a h5 strong, .contact .info a:hover{
+    color:#313131;
+    text-decoration:none;
+}
+
+.contact .link{
     color: rgb(68,131,154);
     text-decoration: underline;
 }
 
+
+
 .info{
     text-align:center;
-    margin-top: 35px;
-    margin-bottom: 15px;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .fa-circle{
@@ -394,7 +444,11 @@ body{
 }
 
 .form-control{
-     border: 2px solid rgba(68,131,154, 0.5);
+     border: .2rem solid rgba(68,131,154, 0.5);
+}
+
+.form-control:focus{
+    border: .2rem solid rgba(52,52,52,0.5);
 }
 
 form .form-group input, form .form-group textarea{
@@ -405,15 +459,15 @@ form .form-group input, form .form-group textarea{
 .submit{
     background-color: #44839A;
     color:white;
-    border: 1px solid transparent;
+    border: .1rem solid transparent;
     border-radius: 0.5rem;
     padding: 0.5rem 1.85rem;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 
 /*Footer*/
 .footer{
     background-color:rgb(52, 52, 52);
-    height:100px;
+    height:10rem;
 }

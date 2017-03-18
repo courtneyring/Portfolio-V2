@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
         <link rel="stylesheet" href="/assets/css/styles.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
 
     <!--[if IE]>
       <link href="/~cering/portfolio-V2/assets/css/bootstrap-ie8.css" rel="stylesheet">
@@ -45,6 +45,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
@@ -100,6 +103,7 @@
                     </h3>
                 
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
                 </div>
             </div>
         </div>
@@ -156,37 +160,37 @@
             <div class="col-12 header">
                 <h2>Portfolio</h2>
             </div>
-            <div class="row portfolio-images">
+            <div class="row portfolio-images justify-content-center">
 
-                <a href="#exampleModal1" class="col-12 col-sm-6 project" id="floorcast" data-toggle="modal">
+                <a href="#floorcastModal" class="col-12 col-md-6 project" id="floorcast" data-toggle="modal">
                     <div class="overlay align-items-center justify-content-center">
                         <h3 class="text text-center">FloorCast<br>
                             <i>Web Application</i>                        
                         </h3>
                     </div>
                 </a>
-                <a href="#cchsModal" class="col-12 col-sm-6 project" id="cchs" data-toggle="modal">
+                <a href="#cchsModal" class="col-12 col-md-6 project" id="cchs" data-toggle="modal">
                     <div class="overlay">
                         <h3 class="text text-center">Crawford County Historical Society<br>
                             <i>Website</i>                        
                         </h3>
                     </div>
                 </a>
-                <a href="#hongkongModal" class="col-12 col-sm-6 project" id="hongkong" data-toggle="modal">
+                <a href="#hongkongModal" class="col-12 col-md-6 project" id="hongkong" data-toggle="modal">
                     <div class="overlay">
                         <h3 class="text text-center">Cigna Hong Kong<br>
                             <i>CMS Project</i>                        
                         </h3>
                     </div>
                 </a>
-                <a href="#ifpModal" class="col-12 col-sm-6 project" id="ifp" data-toggle="modal">
+                <a href="#ifpModal" class="col-12 col-md-6 project" id="ifp" data-toggle="modal">
                     <div class="overlay">
                         <h3 class="text text-center">Cigna Individual and Family Plans<br>
                             <i>Digital Marketing Project</i>                        
                         </h3>
                     </div>
                 </a>
-                <a href="#medicareModal" class="col-12 col-sm-6 project" id="medicare" data-toggle="modal">
+                <a href="#medicareModal" class="col-12 col-md-6 project" id="medicare" data-toggle="modal">
                     <div class="overlay">
                         <h3 class="text text-center">Cigna Medicare<br>
                             <i>Plan Finder Application</i>                        
@@ -202,11 +206,54 @@
                 </a>
             </div>
         </div>
-        <div id="hongkongInclude"></div>
-        <div id="cchsInclude"></div>
-        <div id="ifpInclude"></div>
-        <div id="medicareInclude"></div>
         
+        
+        <!--Portfolio Modal-->
+        <div class="modal modalPortfolio fade" id="" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title title"></h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="fa fa-close"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
+                                <img src="" />
+                                <!--<div class="image"></div>-->
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-5">
+                                <!--<h3 class="title"></h3>-->
+                                <h4>Project Description and Details</h4>
+                                <h5 class="description"></h5>
+                                <h4 class="specs">Project Specs</h4>
+                                <table>
+                                    <tr>
+                                        <td><h5>Company: </h5></td>
+                                        <td><h5 class="company"></h5></td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5>Skills: </h5></td>
+                                        <td><h5 class="skills"></h5></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5>Date: </h5></td>
+                                        <td><h5 class="date"></h5></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5>Website: </h5></td>
+                                        <td><h5 class="website"></h5></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--Testimonials-->
         <div id="testimonials" class="testimonials row section">
             <div class="col-12 header">
@@ -256,14 +303,15 @@
                 <h2>Contact</h2>
             </div>
             <div class="col-12 text-center">
-                <h2>Shoot me a Message</h2>
+                <h2>Shoot Me a Message</h2>
             </div>
             <div class="col-12 col-sm-2 offset-sm-3 info">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
                 </span>
-                <h4>West Hartford, CT</h4>
+                <h5><strong>Location</strong></h5>
+                <h5>West Hartford, CT</h5>
             </div>
             <div class="col-12 col-sm-2 info">
                 <a href="mailto:hello@courtney-ring.com" target="_blank">
@@ -271,16 +319,17 @@
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
                 </span>
-
-                <h4>hello@courtney-ring.com</h4></a>
+                <h5><strong>Email</strong></h5>
+                <h5 class="link">hello@courtney-ring.com</h5></a>
             </div>
             <div class="col-12 col-sm-2 info">
-                <a href="http://www.linkedin.com/courtneyring710" target="_blank">
+                <a href="http://www.linkedin.com/in/courtneyring710" target="_blank">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
                 </span>
-                <h4>courtneyring710</h4></a>
+                <h5><strong>LinkedIn</strong></h5>
+                <h5 class="link">courtneyring710</h5></a>
             </div>
             <div class="col-12 col-sm-6 offset-sm-3 form-column">
                 <form role="form" method="post" onsubmit="successMessage()"ac2tion="mailer.php">
