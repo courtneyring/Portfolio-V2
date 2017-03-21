@@ -29,14 +29,11 @@
             </button>
 
             <a class="navbar-brand" href="#">
-                <img alt="Brand" src="assets/images/CourtneyRingLogo.png" />
+                <img alt="Brand" src="assets/images/courtney-ring-logo-white.png" />
             </a>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
                 </li>
@@ -59,7 +56,7 @@
 
     <div class="container-fluid">
         <!-- Landing Page -->
-        <div class="row landing">
+        <div class="row landing" id="landing">
 
             <div class="col-6 creative">
                 <div class="row align-items-center  text-right">
@@ -76,21 +73,31 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-8 offset-lg-2 text-center wording">
-                <h1><span>Marketing Technologist<br></span></h1>
-                <h2><span>mar·ket·ing tech·nol·o·gist</span></h2>
-                <h2><span><i> /ˈmärkədiNG tekˈnäləjəst/ noun</i></span></h2>
-                <h2><span>
-                        def: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis.
+            
+            <div class="col-12 col-lg-8 offset-lg-2 d-flex flex-column text-center wording">
+                <div class="definition">
+                    <h1><span>Marketing Technologist<br></span></h1>
+                    <h2><span>mar·ket·ing tech·nol·o·gist</span></h2>
+                    <h2><span><i> /ˈmärkədiNG tekˈnäləjəst/ noun</i></span></h2>
+                    <h2><span>
+                            def: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis.
+                        </span>
+                    </h2>
+                </div>
+                <a class="arrow" href="#about">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-angle-down fa-stack-1x"></i>
                     </span>
-                </h2>
+                 </a>
             </div>
+            
         </div>
 
         <!-- About Page -->
         <div class="row section about" id="about">
             <div class="col-12 header">
-                <h2>About</h2>
+                <h2><span>About&nbsp;&nbsp;Me</span></h2>
             </div>
             <div class="col-12 offset-sm-4 col-sm-7">
                 <div class="about-blurb">
@@ -111,7 +118,7 @@
         <!-- Skills Page -->
         <div class="row section skills" id="skills" class="skills">
             <div class="col-12 header">
-                <h2>Skill</h2>
+                <h2><span>What&nbsp;&nbsp;I&nbsp;&nbsp;Do</span></h2>
             </div>
 
             <div class="col-12 col-sm-3 offset-sm-2 skill-section">
@@ -158,52 +165,40 @@
         <!-- Portfolio Page -->
         <div class="row section portfolio" id="portfolio">
             <div class="col-12 header">
-                <h2>Portfolio</h2>
+                <h2><span>My&nbsp;&nbsp;Latest&nbsp;&nbsp;Work</span></h2>
             </div>
             <div class="row portfolio-images justify-content-center">
+                <div class="col-12 col-md-6 project">
+                    <div class="project-inner" id="cchs">
+                        <a href="#cchsModal" data-toggle="modal" >Crawford County Historical Society</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 project">
+                    <div class="project-inner" id="ifp">
+                        <a href="#ifpModal" data-toggle="modal">Cigna Individual &amp; Plans</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 project">
+                    <div class="project-inner" id="floorcast">
+                        <a href="#floorcastModal" data-toggle="modal">Floorcast</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 project">
+                    <div class="project-inner" id="medicare">
+                        <a href="#medicareModal" data-toggle="modal">Cigna Medicare</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 project">
+                    <div class="project-inner" id="hongkong">
+                        <a href="#hongkongModal" data-toggle="modal">Cigna Hong Kong</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 project">
+                    <div class="project-inner" id="hongkong">
+                        <a href="#hongkongModal" data-toggle="modal">Cigna Hong Kong</a>
+                    </div>
+                </div>
 
-                <a href="#floorcastModal" class="col-12 col-md-6 project" id="floorcast" data-toggle="modal">
-                    <div class="overlay align-items-center justify-content-center">
-                        <h3 class="text text-center">FloorCast<br>
-                            <i>Web Application</i>                        
-                        </h3>
-                    </div>
-                </a>
-                <a href="#cchsModal" class="col-12 col-md-6 project" id="cchs" data-toggle="modal">
-                    <div class="overlay">
-                        <h3 class="text text-center">Crawford County Historical Society<br>
-                            <i>Website</i>                        
-                        </h3>
-                    </div>
-                </a>
-                <a href="#hongkongModal" class="col-12 col-md-6 project" id="hongkong" data-toggle="modal">
-                    <div class="overlay">
-                        <h3 class="text text-center">Cigna Hong Kong<br>
-                            <i>CMS Project</i>                        
-                        </h3>
-                    </div>
-                </a>
-                <a href="#ifpModal" class="col-12 col-md-6 project" id="ifp" data-toggle="modal">
-                    <div class="overlay">
-                        <h3 class="text text-center">Cigna Individual and Family Plans<br>
-                            <i>Digital Marketing Project</i>                        
-                        </h3>
-                    </div>
-                </a>
-                <a href="#medicareModal" class="col-12 col-md-6 project" id="medicare" data-toggle="modal">
-                    <div class="overlay">
-                        <h3 class="text text-center">Cigna Medicare<br>
-                            <i>Plan Finder Application</i>                        
-                        </h3>
-                    </div>
-                </a>
-                <a href="#" class="col-12 col-sm-6 project">
-                    <div class="overlay">
-                        <h3 class="text text-center">Crawford County Historical Society<br>
-                            <i>Website</i>                        
-                        </h3>
-                    </div>
-                </a>
             </div>
         </div>
         
@@ -257,7 +252,7 @@
         <!--Testimonials-->
         <div id="testimonials" class="testimonials row section">
             <div class="col-12 header">
-                <h2>Testimonials</h2>
+                <h2><span>Testimonials</span></h2>
             </div>
             <div class="col-12 col-sm-8 offset-sm-2">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -300,10 +295,7 @@
         <!-- Contact Page -->
         <div id="contact" class="contact row section">
             <div class="col-12 header">
-                <h2>Contact</h2>
-            </div>
-            <div class="col-12 text-center">
-                <h2>Shoot Me a Message</h2>
+                <h2><span>Contact&nbsp;&nbsp;Me</span></h2>
             </div>
             <div class="col-12 col-sm-2 offset-sm-3 info">
                 <span class="fa-stack fa-lg">
@@ -353,7 +345,11 @@
         
         <!--Footer-->
         <div id="footer" class="footer row section">
-            <p>©2017 Courtney Ring</p>
+            <p>
+                <span><a href="#landing">Back to Top</a></span>
+                <span>©2017 Courtney Ring</span>
+                
+            </p>
         </div>
         
     </div>

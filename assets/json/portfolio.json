@@ -6,42 +6,47 @@
         "company": "personal",
 		"date": "9/30/20014",
 		"skills": "AngularJS, HTML, CSS",
-		"website": "floorcast.info"
+		"website": "floorcast.info",
+        "thumbnail":"/assets/images/portfolio/floorcast/floorcast-thumbnail.jpg" 
 	},
 	"cchs": {
 		"title": "Crawford County Historical Society Website",
         "image": "/assets/images/portfolio/cchs/cchs-exhibits.png",
-		"description": "Lorem ipsum",
+		"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhon",
         "company": "CCHS",
 		"date": "9/30/20014",
 		"skills": "AngularJS, HTML, CSS",
-		"website": "crawfordcountyhistoricalsociety.com"
+		"website": "crawfordcountyhistoricalsociety.com",
+        "thumbnail":"/assets/images/portfolio/cchs/cchs-thumbnail.jpg" 
 	}, 
     "ifp": {
 		"title": "Cigna Individual & Family Plans",
         "image": "/assets/images/portfolio/ifp/ifp-landing-full.png",
-		"description": "Lorem ipsum",
+		"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhon",
         "company": "Cigna",
 		"date": "9/30/20014",
 		"skills": "HTML, CSS, Content Management, Python",
-		"website": "cigna.com/individuals-families"
+		"website": "cigna.com/individuals-families",
+        "thumbnail":"/assets/images/portfolio/ifp/ifp-thumbnail.jpg" 
 	}, 
     "medicare": {
 		"title": "Cigna Medicare 2017",
         "image": "/assets/images/portfolio/medicare/medicare-plan-finder.png",
-		"description": "Lorem ipsum",
+		"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhon",
         "company": "Cigna",
 		"date": "9/30/20014",
 		"skills": "Python, Content Management",
-		"website": "cigna.com/medicare"
+		"website": "cigna.com/medicare",
+        "thumbnail":"/assets/images/portfolio/medicare/medicare-thumbnail.jpg" 
 	},
     "hongkong": {
 		"title": "Cigna Hong Kong",
         "image": "/assets/images/portfolio/hongkong/hk-landing-cn.png",
-		"description": "Lorem ipsum",
+		"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhon",
         "company": "Cigna",
 		"date": "9/30/20014",
 		"skills": "HTML, CSS, XSL, Content Management",
-		"website": "cigna.com.hk"
+		"website": "cigna.com.hk",
+        "thumbnail":"/assets/images/portfolio/hongkong/hongkong-thumbnail.jpg" 
 	}
 }

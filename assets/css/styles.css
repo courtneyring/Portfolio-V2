@@ -24,7 +24,7 @@ h4{
 }
 
 h5{
-    font-size:2rem;
+    font-size:1.9rem;
     line-height:3rem;
 }
 
@@ -104,13 +104,34 @@ body{
     .navbar.scrolled {
         background: rgb(49, 49, 49);
     }
+    
+    .navbar-nav{
+        background-color: rgba(52,52,52,0.6);
+        box-shadow: 0rem 0rem 2.5rem rgba(52, 52, 52, 1);
+    }
+    
+    .navbar.scrolled .navbar-nav{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    
 }
 
 
+.navbar-toggleable-md .navbar-nav .nav-link{
+    padding-right:1.2rem;
+    padding-left:1.2rem;
+    
+}
 
-.navbar .navbar-collapse ul li a{
+.navbar .navbar-collapse ul li .nav-link{
     color:white;
-    font-size:2.6rem;
+    font-size:2.3rem;
+    padding:.3rem 1rem;
+}
+
+.navbar .navbar-collapse ul li .nav-link.active{
+    color:#44839A;
 }
 
 
@@ -159,7 +180,9 @@ body{
 }
 
 .wording{
-    margin-top:-75vh;
+    margin-top:-100vh;
+    height:100vh;
+    padding-top:50px;
 }
 
 .wording h1 span, .wording h2 span{
@@ -168,18 +191,48 @@ body{
     line-height:1.3;
 }
 
+.wording .definition{
+    margin:auto;
+}
+
+.wording .arrow{
+    padding-bottom: 50px;
+}
+
+.wording .arrow .fa-circle{
+    color:rgb(255,255,255);
+}
+
+.wording .arrow .fa-angle-down{
+    color: #44839A;
+    font-size:4.5rem;
+}
+
+
 .section{
     padding-bottom:6rem;
 }
 
 .section .header{
-    padding:2.5rem 2.5rem;
+    
+    text-transform:uppercase;
+}
+.section .header h2{
+    font-weight:900;
+    text-align:center;
+}
+
+.header h2 span{
+    border-bottom:.6rem double #44839A;
+    padding: 0rem 1.3rem;
 }
 
 @media(min-width:767px){
     .section .header{
-        padding:2.5rem 5rem;
+        padding: 4.5rem 5rem 4.5rem 5rem;
     }
+    
+
 }
 
 /*About Section*/
@@ -277,58 +330,65 @@ body{
     }
 }
 
-.portfolio-images>a{
-    background: url(/assets/images/creative1.jpg) center/cover no-repeat;
+.project{
     height:38.9rem;
     max-width:55.2rem;
     border: 1.2rem solid #313131;
+    overflow: hidden;
+    cursor: pointer;
+    padding:0rem;    
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.project-inner {
+    height: 100%;
+    width: 100%;
+    background: url(/assets/images/cchs.jpg) center/cover no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.project .project-inner a{
+    width:100%;
+    height:100%;
+    padding:12rem 6rem;
+    display: none;
+    font-size: 35px;
+    color: #ffffff !important;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+.project:hover .project-inner, .project:focus .project-inner {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.project:hover .project-inner:before, .project:focus .project-inner:before {
+    display: block;
+}
+
+.project:hover a, .project:focus a {
+    display: block;
+}
+
+.project-inner::before {
+  content: "";
+  display: none;
   height: 100%;
   width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #44839A;
-}
-
-.project:hover .overlay {
-  opacity: 0.9;
-}
-
-.text {
-  color: white;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  background-color: rgba(52, 52, 52, 0.8);
 }
 
-#floorcast{
-    background: url(/assets/images/floorcast-logo.jpg) center/cover no-repeat;
-}
-
-#cchs{
-    background: url(/assets/images/cchs.jpg) center/cover no-repeat;
-}
-
-#hongkong{
-        background: url(/assets/images/portfolio/hongkong/hk-thumbnail.png) center/cover no-repeat;
-}
-
-#medicare{
-    background: url(/assets/images/cigna-medicare.png) center/cover no-repeat;
-}
-
-#ifp{
-    background: url(/assets/images/portfolio/ifp/ifp-thumbnail.jpg) center/cover no-repeat;
-}
 
 .modal-dialog{
     width: 100%;
@@ -393,9 +453,12 @@ body{
 
 /*Testimonials Section*/
 .testimonials{
-    background: url(/assets/images/testimonials.jpg) center/cover no-repeat;
+    background: url(/assets/images/testimonials.jpg) center/cover no-repeat fixed;
 }
 
+.testimonials .carousel{
+    height:22rem;
+}
 .testimonials .header{
     color:white;
 }
@@ -403,8 +466,6 @@ body{
 .testimonials .carousel-inner{
     width:75%;
     margin: 0 auto;
-    height:40rem;
-    transform:translateY(25%);
 }
 
 .testimonials .carousel-item p{
@@ -430,7 +491,6 @@ body{
 
 .info{
     text-align:center;
-    margin-top: 3.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -470,4 +530,25 @@ form .form-group input, form .form-group textarea{
 .footer{
     background-color:rgb(52, 52, 52);
     height:10rem;
+    color:white;
+}
+
+.footer p{
+    width:100%;
+    margin:3rem;
+}
+
+.footer span:first-child{
+    float:left;
+}
+
+.footer span a{
+    color: #44839A;
+    text-decoration:underline;
+}
+
+
+
+.footer span:nth-child(2){
+    float:right;
 }

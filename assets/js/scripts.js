@@ -1,5 +1,6 @@
 //--------Smoothscroll Function---------//
-$("nav ul li a[href^='#']").on('click', function(e) {
+//$("nav ul li a[href^='#']").on('click', function(e) {
+$(".nav-item a, .arrow, .footer a").on('click', function(e) {
 
    e.preventDefault();
 
@@ -28,22 +29,36 @@ $("nav ul li a[href^='#']").on('click', function(e) {
 });
 
 
+$('body').scrollspy({
+   offset: $("nav").outerHeight()+3
+});
+
+
+
+
 //---------Navbar color change-------//
 function checkScroll(){
-    var startY = $('.navbar').height() * 4; 
+    var startY = $('.navbar').height() ; 
+
 
     if($(window).scrollTop() > startY){
         $('.navbar').addClass("scrolled");
+        $(".navbar .navbar-brand img").attr("src","/assets/images/courtney-ring-logo-white.png");
     }else{
         $('.navbar').removeClass("scrolled");
+        $(".navbar .navbar-brand img").attr("src","/assets/images/CourtneyRingLogo.png");
     }
 }
 
-if($('.navbar').length > 0){
-    $(window).on("scroll load resize", function(){
-        checkScroll();
-    });
-}
+$(function(){
+    if($(window).width() > 992 ){
+        $(window).on("scroll load resize", function(){
+            checkScroll();
+        });
+    }
+
+})
+
 
 
 //------------Text Rotate-----------//
@@ -113,15 +128,26 @@ $(function(){
     
     $.getJSON("/assets/json/portfolio.json", function(json) {
         data = json;
-    });
+
+    }).then(function(){
+         $(".portfolio .portfolio-images .project-inner").each(function(){
+            
+            var thumbnailLoc = this.id;
+            var thumbnail = data[thumbnailLoc].thumbnail;
+            
+            $(this).css("background", "url("+thumbnail+") center/cover no-repeat");    
+        
+        })
+    })
+    
     
     $(".project").on('click',function(){
         
-        var key = this.id;
-        var id = this.getAttribute("href").replace('#','');
+        var key = $(this).children(".project-inner").attr("id");
+        var id = $(this).find("a").attr("href").replace('#','');
         $(".modalPortfolio").attr("id",id);
         
-        var aria = this.href.replace('#','');
+        var aria = id;
         $(".modalPortfolio").attr("aria-labelledby",aria);
         
         var image = data[key].image;
