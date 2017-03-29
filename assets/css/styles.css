@@ -70,7 +70,7 @@ a:focus{
     }
 
     p, li{
-        font-size:2rem;
+        font-size:1.9rem;
     }
 }
 
@@ -266,7 +266,7 @@ body{
 }
 
 /*Skills Section*/
-.skill-section:nth-of-type(2), .skill-section:nth-of-type(3){
+/*.skill-section:nth-of-type(2), .skill-section:nth-of-type(3){
     margin-top:4rem;
 }
 
@@ -307,6 +307,128 @@ body{
     color:#44839A;
 }
 
+.skills .left-col, .skills .right-col{
+    width:33%;
+}
+
+
+.skills .fa-desktop{
+    font-size:50rem;
+}
+
+
+
+.skills-labels{
+    display:flex;
+    flex-direction:column;
+    padding: 5rem 0rem 10rem 0rem;
+}
+
+
+.skills-labels h1{
+    transform:rotatez(-90deg);
+}
+
+.skills-labels h1:nth-child(2){
+    margin-top:auto;
+}
+
+.skills-section{
+    padding:4rem;
+    padding-bottom:0rem;
+}
+
+.skills-section .skills-list, .skills-section .tools-list,{
+    padding-top:3rem;
+    padding-left:5rem;
+}
+
+.skills-section hr{
+    margin-bottom:0rem;
+    margin-top:3rem;
+}
+
+.skills-section:before{
+
+}
+
+.skills-section:after{
+    
+}*/
+
+.skill-section {
+    text-align:center;
+    margin:auto;
+    margin-top:0;
+
+}
+
+.skills .middle-left, .skills .middle-right{
+    padding-top:11rem;
+}
+
+.skills .middle{
+    margin-top: -6rem;
+}
+
+/*.skills .middle{
+    margin-top:-6rem;
+}*/
+
+.skill-section.blue h4{
+    color: #44839A;
+}
+
+.skill-section.black h4{
+    color: #313131;
+}
+
+.skill-section h4{
+    font-weight:700;
+}
+
+.middle-left{
+    margin-right:0rem;
+}
+
+.middle-right{
+    margin-left:0rem;
+}
+
+.skills-image{
+    margin:0rem;
+}
+
+.skills-image img{
+    width:100%;
+    height:auto;
+}
+
+.skills table p{
+    margin:0rem;
+}
+
+.skills-image{
+    height:57rem;
+}
+
+.skills-image image{
+
+
+}
+
+.skills-image foreignObject{
+    color:white;
+    fill:white;
+    display:table;
+}
+
+.skills .skills-image foreignObject div{
+    display:table-cell;
+    height:100px;
+    vertical-align:middle;
+}
+
 
 /*Portfolio Section*/
 .portfolio{
@@ -341,7 +463,6 @@ body{
 .project-inner {
     height: 100%;
     width: 100%;
-    background: url(/assets/images/cchs.jpg) center/cover no-repeat;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -o-transition: all .5s;
@@ -410,6 +531,10 @@ body{
 .modal-body img{
     width:100%;
    /* height:100%;*/
+}
+
+.modal-body .image{
+    height:42rem;
 }
 
 .modal-header{

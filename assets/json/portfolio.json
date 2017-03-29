@@ -48,5 +48,16 @@
 		"skills": "HTML, CSS, XSL, Content Management",
 		"website": "cigna.com.hk",
         "thumbnail":"/assets/images/portfolio/hongkong/hongkong-thumbnail.jpg" 
+	},
+    "dxs": {
+		"title": "Cigna Digital Experience Standards",
+        "image": "/assets/images/portfolio/dxs/dxs-thumbnail.png",
+		"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhon",
+        "company": "Cigna",
+		"date": "9/30/20014",
+		"skills": "HTML, CSS, XSL, Content Management",
+		"website": "Internal Site",
+        "thumbnail":"/assets/images/portfolio/dxs/dxs-thumbnail.jpg" 
 	}
+    
 }

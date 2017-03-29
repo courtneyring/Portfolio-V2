@@ -151,9 +151,8 @@ $(function(){
         $(".modalPortfolio").attr("aria-labelledby",aria);
         
         var image = data[key].image;
-        //$(".modalPortfolio .modal-body .image").css("background","url("+image+") center/cover no-repeat");
-        $(".modalPortfolio .modal-body img").attr('src', image);
-        
+        $(".modalPortfolio .modal-body .image").css("background","url("+image+") top center/cover no-repeat");
+        //$(".modalPortfolio .modal-body img").attr('src', image);
         
         var title = data[key].title;
         $(".modalPortfolio .modal-header .title").text(title);
@@ -172,13 +171,283 @@ $(function(){
         
         var website = data[key].website;
         $(".modalPortfolio .modal-body .website").text(website);
-        
-        //var test = $(".modal.portfolio");
-        //console.log(test);
-        //console.log(data[key].projectName);
 
     });
 })
 
 
+//---------Skills Circle Generation and Animation ----//
+function calculateRotation(rotation, oldCoords, cx, cy){
+    var r = -(rotation*Math.PI)/180;
+    var s = Math.sin(r)
+    var c = Math.cos(r)
+    
+    newCoords = new Object();
+    newCoords.x = c*(oldCoords.x-cx) + s*(oldCoords.y-cy) + cx;
+    newCoords.y = -s*(oldCoords.x-cx) + c*(oldCoords.y-cy) + cy;
+    
+    return newCoords
+}
 
+function drawCircle(oldShape){
+      $(".skills-image .shapes path").each(function(){
+        
+        var newShape = {
+            pointOne : {},
+            pointTwo : {},
+            pointThree : {}
+        }
+        
+        newShape.pointOne.x = oldShape.pointThree.x
+        newShape.pointOne.y = oldShape.pointThree.y
+
+        
+        newShape.pointTwo = calculateRotation(60, oldShape.pointTwo, 240,240)
+        
+        newShape.pointThree = calculateRotation(60,oldShape.pointThree, 240, 240)
+        
+        var oneToTwo = new Object();
+        var twoToThree = new Object();
+        var threeToOne = new Object();
+        
+        oneToTwo.x = newShape.pointTwo.x-newShape.pointOne.x
+        oneToTwo.y = newShape.pointTwo.y-newShape.pointOne.y
+        
+        twoToThree.x = newShape.pointThree.x-newShape.pointTwo.x
+        twoToThree.y = newShape.pointThree.y-newShape.pointTwo.y
+        
+        threeToOne.x = newShape.pointOne.x-newShape.pointThree.x
+        threeToOne.y = newShape.pointOne.y-newShape.pointThree.y
+        
+        var dString = 
+            "m" + newShape.pointOne.x + " " + newShape.pointOne.y + " " +
+            "l" + oneToTwo.x + " " + oneToTwo.y + " " +
+            "l" + twoToThree.x + " " + twoToThree.y + " " +
+            "a 240 240, 0, 0, 0, " + threeToOne.x + " " + threeToOne.y
+        
+       $(this).attr('d', dString);
+
+        oldShape = newShape;
+    })    
+}
+
+function drawLabels(labelCoords, rotation){
+    $(".skills .skills-image .labels foreignObject").each(function(){
+        
+        var newCoords = new Object()
+        
+        newCoords = calculateRotation(rotation,labelCoords, 240,240)
+        
+        $(this).attr('x',newCoords.x-65)
+        $(this).attr('y',newCoords.y-50)
+        
+        labelCoords = newCoords
+    })
+    
+}
+
+function generateSkillsCircle (){
+    var posOne = $(".skills-image .shapes path:first-child").attr("d");
+    var coords = posOne.split(" ");
+
+    var oldShape =  {
+        pointOne : {},
+        pointTwo : {},
+        pointThree : {}
+    }
+    
+    
+    oldShape.pointOne.x = parseFloat(coords[0].replace("m",""));
+    oldShape.pointOne.y = parseFloat(coords[1])
+    
+    oldShape.pointTwo.x = oldShape.pointOne.x + parseFloat(coords[2].replace("l",""));
+    oldShape.pointTwo.y = oldShape.pointOne.y + parseFloat(coords[3]);
+    
+    oldShape.pointThree.x = oldShape.pointTwo.x + parseFloat(coords[4].replace("l",""));
+    oldShape.pointThree.y = oldShape.pointTwo.y + parseFloat(coords[5]);
+
+    drawCircle(oldShape);
+    
+    var labelCoords = new Object();
+    labelCoords.x = parseFloat($(".skills-image .labels foreignObject:first-child").attr("x"))+65
+    labelCoords.y = parseFloat($(".skills-image .labels foreignObject:first-child").attr("y"))+50
+    
+    console.log(labelCoords);
+    drawLabels(labelCoords, 60)
+    
+    
+}
+
+function labelLookup(){
+    oldCoords = new Object();
+    $(".skills .skills-image .labels foreignObject").each(function(){
+        var lookup = this.id.replace("label","")
+        var coords = new Object();
+        coords.x =  $(this).attr('x');
+        coords.y = $(this).attr('y');
+        oldCoords[lookup] = coords;
+        
+    })
+    return oldCoords
+}
+
+//function updateLabelCoords(rotation, id, newX, newY){
+function updateLabelCoords(rotation){
+    var oldCoords = labelLookup()
+    
+    $(".skills .skills-image .labels foreignObject").each(function(){
+        var id = parseInt($(this).attr('id').replace("label",""))
+        var newPos = parseInt((id+rotation)%6);
+        console.log(rotation)
+        console.log(id)
+        console.log(newPos)
+        
+        //var newX = oldCoords[newPos].x;
+        //var newY = oldCoords[newPos].y;
+
+        //console.log($("#label"+id).attr('x'))
+        
+        $(this).attr('x',oldCoords[newPos].x);
+        $(this).attr('y',oldCoords[newPos].y);
+
+             //  $("#label"+id).find("animateMotion").remove()
+
+        //$("#label"+id).attr('id',"label"+newPos);
+    
+        //console.log("newCoords: "+newX+","+newY)
+        
+    })
+    //})
+    
+    $(".skills .labels animateMotion").remove()
+}
+
+function updateShapeCoords(rotation){
+    
+    var oldValues = new Object();
+
+    $(".skills .skills-image .shapes path").each(function(){
+        var lookup = this.id
+        oldValues[lookup] = $(this).attr('d'); 
+    })
+    
+    
+    $(".skills .skills-image .shapes path").each(function(){
+        var id = parseInt(this.id)
+        var newPos = parseInt(id+rotation)%6;
+        $(this).attr('id',newPos);
+
+        var newVal = oldValues[newPos];
+        $(this).attr('d',newVal);
+    })
+    $(".skills .shapes animateTransform").remove();
+    
+    updateLabelCoords(rotation)
+    
+}
+
+function createRotation(rotation){
+    
+    var animation = document.createElementNS(
+                         'http://www.w3.org/2000/svg', 'animateTransform');
+    animation.setAttributeNS(null, 'attributeName', 'transform');
+    animation.setAttributeNS(null, 'onend', 'updateShapeCoords('+rotation+')');
+    animation.setAttributeNS(null, 'attributeType', 'transform');
+    animation.setAttributeNS(null, 'begin', 'indefinite');
+    animation.setAttributeNS(null, 'type', 'rotate');
+    animation.setAttributeNS(null, 'from', '0 240 240');
+    if(rotation==5 || rotation ==4){
+        animation.setAttributeNS(null, 'to', -60*(6-rotation) + ' 240 240');
+    }
+    else{
+        animation.setAttributeNS(null, 'to', 60*rotation + ' 240 240');
+    }
+    animation.setAttributeNS(null, 'dur', '2s');
+    animation.setAttributeNS(null, 'fill', 'freeze');
+    animation.setAttributeNS(null, 'id', 'circle');
+    return animation;
+}
+
+function createTranslation(rotation, oldCoords, id){
+
+    var sweepFlag
+    var pathString = "M 0 0 "
+    
+    if (rotation > 3){
+        
+        for (x=0; x<6-rotation; x++){
+            
+            var orig = oldCoords[(id+6-x)%6]
+            var dest = oldCoords[(id+6-x-1)%6]
+
+            var newString = ' a240 240 0 0 0 ' + parseFloat(dest.x-orig.x) + ' ' + parseFloat(dest.y-orig.y)
+
+            pathString+=newString
+            
+        }
+    }
+    else{
+
+        for (x=0; x<rotation; x++){
+
+            var orig = oldCoords[(id+x)%6]
+            var dest = oldCoords[(id+(x+1))%6]
+
+
+            var newString = ' a240 240 0 0 1' +  parseFloat(dest.x-orig.x) + ' ' + parseFloat(dest.y-orig.y)
+
+            pathString+=newString
+        }
+    }
+
+    var Origin = oldCoords[id]
+    var Destination = oldCoords[parseFloat(id+rotation)%6]
+
+    var animation = document.createElementNS(
+                         'http://www.w3.org/2000/svg', 'animateMotion');
+    animation.setAttributeNS(null,'dur', '2s');
+   // animation.setAttributeNS(null,'fill', 'freeze');
+    animation.setAttributeNS(null,'begin', 'circle.begin');
+    animation.setAttributeNS(null, 'path', pathString);
+    //animation.setAttributeNS(null, 'onend', 'updateLabelCoords('+id+',' +Destination.x+','+Destination.y+','+rotation+')')
+    
+    $('#label'+id).append(animation)
+}
+
+
+$(".skills .skills-image .shapes path").on('click', function(){
+
+    //Get Click ID and calculate rotation num
+    var id = parseInt(this.id);
+    if (id===0){return;}
+    var rotation = parseInt(6-this.id);
+    
+    
+    
+   //Create Rotation Animation, inject into DOM
+    var rotationAnimation = createRotation(rotation);
+    $(".skills .skills-image .shapes").append(rotationAnimation)
+
+    
+    oldCoords = labelLookup();
+
+    $(".skills .skills-image .labels foreignObject").each(function(){
+        //$(".skills .skills-image .shapes foreignObject").each(function(){
+        var labelId = parseInt($(this).attr('id').replace('label',''))
+        rotAnim2 = createTranslation(rotation, oldCoords, labelId);
+        //rotAnim2 = createRotation(-1*rotation, oldCoords, labelId);
+        $(this).append(rotAnim2);
+    
+
+    })
+    //rotAnim2.beginElement();
+    rotationAnimation.beginElement(); 
+
+})
+
+
+
+$(function(){
+    generateSkillsCircle();
+
+})
