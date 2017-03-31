@@ -312,10 +312,12 @@ body{
     margin-top:5rem;
 }
 
-.skills .dropdown-toggle{
+.skill-section-mobile .custom-select{
     background-color: #44839A;
     color: white;
     width:100%;
+    height:50px;
+    margin-bottom:2.5rem;
 }
 
 .skills .btn-group{
