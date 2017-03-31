@@ -36,6 +36,9 @@ a:focus{
     outline: 0 !important;
 }
 
+ul{
+    padding-left:20px;
+}
 
 
 @media(min-width:576px){
@@ -266,156 +269,8 @@ body{
 }
 
 /*Skills Section*/
-/*.skill-section:nth-of-type(2), .skill-section:nth-of-type(3){
-    margin-top:4rem;
-}
-
-.skill-section:nth-of-type(4), .skill-section:nth-of-type(5){
-    margin-top:10rem;
-    margin-bottom:5rem;
-}
-
-.skills h2{
-    color:#313131;
-}
-
-.skill-section {
-    text-align:center;
-}
-
-.skill-section hr{
-    margin-left:4rem;
-    margin-right:4rem;
-}
-
-.skill-section ul{
-    list-style-type:none;
-    text-align: center;
-    padding:0;
-}
-
-.skill-section .fa{
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-    color: white;
-    background-color: #44839A;
-    padding: 1.5rem;
-    border-radius: 4rem;
-}
-
-.skill-section h3{
-    color:#44839A;
-}
-
-.skills .left-col, .skills .right-col{
-    width:33%;
-}
 
 
-.skills .fa-desktop{
-    font-size:50rem;
-}
-
-
-
-.skills-labels{
-    display:flex;
-    flex-direction:column;
-    padding: 5rem 0rem 10rem 0rem;
-}
-
-
-.skills-labels h1{
-    transform:rotatez(-90deg);
-}
-
-.skills-labels h1:nth-child(2){
-    margin-top:auto;
-}
-
-.skills-section{
-    padding:4rem;
-    padding-bottom:0rem;
-}
-
-.skills-section .skills-list, .skills-section .tools-list,{
-    padding-top:3rem;
-    padding-left:5rem;
-}
-
-.skills-section hr{
-    margin-bottom:0rem;
-    margin-top:3rem;
-}
-
-.skills-section:before{
-
-}
-
-.skills-section:after{
-    
-}*/
-
-.skill-section {
-    text-align:center;
-    margin:auto;
-    margin-top:0;
-
-}
-
-.skills .middle-left, .skills .middle-right{
-    padding-top:11rem;
-}
-
-.skills .middle{
-    margin-top: -6rem;
-}
-
-/*.skills .middle{
-    margin-top:-6rem;
-}*/
-
-.skill-section.blue h4{
-    color: #44839A;
-}
-
-.skill-section.black h4{
-    color: #313131;
-}
-
-.skill-section h4{
-    font-weight:700;
-}
-
-.middle-left{
-    margin-right:0rem;
-}
-
-.middle-right{
-    margin-left:0rem;
-}
-
-.skills-image{
-    margin:0rem;
-}
-
-.skills-image img{
-    width:100%;
-    height:auto;
-}
-
-.skills table p{
-    margin:0rem;
-}
-
-.skills-image{
-    height:57rem;
-}
-
-.skills-image image{
-
-
-}
 
 .skills-image foreignObject{
     color:white;
@@ -427,6 +282,37 @@ body{
     display:table-cell;
     height:100px;
     vertical-align:middle;
+}
+
+
+.skills-content{
+    text-align:left;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+
+.skills-content .content-list{
+    margin-top:5rem;
+}
+
+.skills-content .content-section{
+    display:none;
+    margin-left:4rem;
+}
+
+#content0{
+    display:block;
+}
+
+.skill-section svg{
+    margin-left: 9rem;
+    margin-right: 4rem;
+}
+
+.skills .labels, .skills .labels foreignObject, svg{
+    -webkit-backface-visibility: hidden;
+    z-index:999;
 }
 
 

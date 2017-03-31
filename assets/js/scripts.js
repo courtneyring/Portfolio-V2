@@ -157,7 +157,9 @@ $(function(){
         var title = data[key].title;
         $(".modalPortfolio .modal-header .title").text(title);
         
-        var desc = data[key].description;
+
+        var desc = JSON.stringify((data[key].description).replace(/\n/g,'<br />'))
+        
         $(".modalPortfolio .modal-body .description").text(desc);
         
         var company = data[key].company;
@@ -256,7 +258,6 @@ function generateSkillsCircle (){
         pointThree : {}
     }
     
-    
     oldShape.pointOne.x = parseFloat(coords[0].replace("m",""));
     oldShape.pointOne.y = parseFloat(coords[1])
     
@@ -291,35 +292,25 @@ function labelLookup(){
     return oldCoords
 }
 
-//function updateLabelCoords(rotation, id, newX, newY){
 function updateLabelCoords(rotation){
+    
+    $(".skills .labels animateMotion").remove()
+    
     var oldCoords = labelLookup()
+    console.log(oldCoords)
     
     $(".skills .skills-image .labels foreignObject").each(function(){
+
         var id = parseInt($(this).attr('id').replace("label",""))
         var newPos = parseInt((id+rotation)%6);
-        console.log(rotation)
-        console.log(id)
-        console.log(newPos)
-        
-        //var newX = oldCoords[newPos].x;
-        //var newY = oldCoords[newPos].y;
 
-        //console.log($("#label"+id).attr('x'))
-        
         $(this).attr('x',oldCoords[newPos].x);
         $(this).attr('y',oldCoords[newPos].y);
 
-             //  $("#label"+id).find("animateMotion").remove()
+        $(this).attr('id',"label"+newPos);
 
-        //$("#label"+id).attr('id',"label"+newPos);
-    
-        //console.log("newCoords: "+newX+","+newY)
-        
     })
-    //})
-    
-    $(".skills .labels animateMotion").remove()
+   
 }
 
 function updateShapeCoords(rotation){
@@ -406,7 +397,7 @@ function createTranslation(rotation, oldCoords, id){
     var animation = document.createElementNS(
                          'http://www.w3.org/2000/svg', 'animateMotion');
     animation.setAttributeNS(null,'dur', '2s');
-   // animation.setAttributeNS(null,'fill', 'freeze');
+    //animation.setAttributeNS(null,'fill', 'freeze');
     animation.setAttributeNS(null,'begin', 'circle.begin');
     animation.setAttributeNS(null, 'path', pathString);
     //animation.setAttributeNS(null, 'onend', 'updateLabelCoords('+id+',' +Destination.x+','+Destination.y+','+rotation+')')
@@ -415,36 +406,46 @@ function createTranslation(rotation, oldCoords, id){
 }
 
 
-$(".skills .skills-image .shapes path").on('click', function(){
+$(".skills .skills-image .shapes path, .skills .skills-image .labels foreignObject").on('click', function(){
 
     //Get Click ID and calculate rotation num
-    var id = parseInt(this.id);
+    var id = parseInt(this.id.replace("label",""));
     if (id===0){return;}
-    var rotation = parseInt(6-this.id);
-    
-    
+    var rotation = parseInt(6-id);
     
    //Create Rotation Animation, inject into DOM
     var rotationAnimation = createRotation(rotation);
     $(".skills .skills-image .shapes").append(rotationAnimation)
 
-    
     oldCoords = labelLookup();
 
     $(".skills .skills-image .labels foreignObject").each(function(){
-        //$(".skills .skills-image .shapes foreignObject").each(function(){
         var labelId = parseInt($(this).attr('id').replace('label',''))
         rotAnim2 = createTranslation(rotation, oldCoords, labelId);
-        //rotAnim2 = createRotation(-1*rotation, oldCoords, labelId);
         $(this).append(rotAnim2);
+    })
+    
+    
+    $(".skills .skills-content").fadeOut(1000, function(){
+        $(".skills .skills-content .content-section").each(function(){
+            
+            var curId = parseInt($(this).attr('id').replace("content",""))
+
+            var newId = "content"+(parseInt(curId+rotation)%6);
+            console.log(newId)
+            $(this).attr('id', newId);
+            if(newId=="content0"){
+                $(this).fadeIn(1000)
+            }
+        
+        })
+    })
+    $(".skills .skills-content").fadeIn(1000);
+
+    rotationAnimation.beginElement(); 
     
 
-    })
-    //rotAnim2.beginElement();
-    rotationAnimation.beginElement(); 
-
 })
-
 
 
 $(function(){
