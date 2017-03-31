@@ -1,6 +1,4 @@
 <?php
-    ini_set('SMTP','localhost'); 
-    ini_set('sendmail_from', 'hello@courtney-ring.com'); 
 
     $name = $_POST['name'];
     $email = $_POST['email'];

@@ -1,6 +1,6 @@
 //--------Smoothscroll Function---------//
 //$("nav ul li a[href^='#']").on('click', function(e) {
-$(".nav-item a, .arrow, .footer a").on('click', function(e) {
+$(".nav-item a, .arrow, .footer a, .navbar-brand").on('click', function(e) {
 
    e.preventDefault();
 
@@ -17,7 +17,7 @@ $(".nav-item a, .arrow, .footer a").on('click', function(e) {
     
    $('html, body').animate({
        scrollTop: scrollLocation
-     }, 300, function(){
+     }, 500, function(){
 
        window.location.hash = hash;
      });
