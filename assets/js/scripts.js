@@ -423,7 +423,7 @@ function displaySkill(id, rotation){
 }
 
 
-$(".btn-group .dropdown-menu .dropdown-item").on('click', function(){
+$(".skill-section-mobile .btn-group .dropdown-item").on('click', function(){
     var id = $(this).attr('id').replace("dropdown","")
     
     
@@ -431,9 +431,10 @@ $(".btn-group .dropdown-menu .dropdown-item").on('click', function(){
         $(".skills .skills-content .content-section").each(function(){
             $(this).addClass('hidden')
         })
-        $(".btn-group .dropdown-menu .dropdown-item").each(function(){
+        $(".skill-section-mobile .btn-group .dropdown-item").each(function(){
             $(this).removeClass('disabled')
         })
+        
         $("#content"+id).removeClass('hidden')
         $("#dropdown"+id).addClass('disabled')
         
