@@ -303,19 +303,55 @@ body{
     margin-bottom:auto;
 }
 
+.skill-section{
+    display:none;
+}
+
 
 .skills-content .content-list{
     margin-top:5rem;
 }
 
-.skills-content .content-section{
-    display:none;
-    margin-left:0rem;
+.skills .dropdown-toggle{
+    background-color: #44839A;
+    color: white;
+    width:100%;
 }
 
-#content0{
-    display:block;
+.skills .btn-group{
+    width:100%;
 }
+
+@media(min-width:767px){
+    .skill-section{
+        display:block;
+    }
+    
+    .skills-content .content-section{
+        display:none;
+        margin-left:0rem;
+    }
+        
+    #content0{
+        display:block;
+    }
+    
+    .skill-section-mobile{
+        display:none;
+    }
+    
+
+    
+}
+
+
+.hidden{
+    display:none;
+}
+
+
+
+
 
 .skill-section svg{
     margin-left: 9rem;

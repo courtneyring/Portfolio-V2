@@ -30,7 +30,7 @@ $(".nav-item a, .arrow, .footer a, .navbar-brand").on('click', function(e) {
 
 
 $('body').scrollspy({
-   offset: $("nav").outerHeight()+3
+   offset: $("nav").outerHeight()
 });
 
 
@@ -405,6 +405,45 @@ function createTranslation(rotation, oldCoords, id){
     $('#label'+id).append(animation)
 }
 
+function displaySkill(id, rotation){
+    $(".skills .skills-content").fadeOut(1000, function(){
+        $(".skills .skills-content .content-section").each(function(){
+
+            var curId = parseInt($(this).attr('id').replace("content",""))
+
+            var newId = "content"+(parseInt(curId+rotation)%6);
+            $(this).attr('id', newId);
+            if(newId=="content0"){
+                $(this).fadeIn(1000)
+            }
+        }) 
+    })
+    $(".skills .skills-content").fadeIn(1000);
+
+}
+
+
+$(".btn-group .dropdown-menu .dropdown-item").on('click', function(){
+    var id = $(this).attr('id').replace("dropdown","")
+    
+    
+    $(".skills .skills-content").fadeOut(500, function(){
+        $(".skills .skills-content .content-section").each(function(){
+            $(this).addClass('hidden')
+        })
+        $(".btn-group .dropdown-menu .dropdown-item").each(function(){
+            $(this).removeClass('disabled')
+        })
+        $("#content"+id).removeClass('hidden')
+        $("#dropdown"+id).addClass('disabled')
+        
+    })
+
+    $(".skills .skills-content").fadeIn(1000);
+})
+
+
+
 
 $(".skills .skills-image .shapes path, .skills .skills-image .labels foreignObject").on('click', function(){
 
@@ -425,26 +464,9 @@ $(".skills .skills-image .shapes path, .skills .skills-image .labels foreignObje
         $(this).append(rotAnim2);
     })
     
-    
-    $(".skills .skills-content").fadeOut(1000, function(){
-        $(".skills .skills-content .content-section").each(function(){
-            
-            var curId = parseInt($(this).attr('id').replace("content",""))
-
-            var newId = "content"+(parseInt(curId+rotation)%6);
-            console.log(newId)
-            $(this).attr('id', newId);
-            if(newId=="content0"){
-                $(this).fadeIn(1000)
-            }
-        
-        })
-    })
-    $(".skills .skills-content").fadeIn(1000);
-
+    displaySkill(id, rotation)
     rotationAnimation.beginElement(); 
     
-
 })
 
 
