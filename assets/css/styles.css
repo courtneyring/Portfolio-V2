@@ -571,67 +571,76 @@ select.minimal {
     background: url(/assets/images/testimonials.jpg) center/cover no-repeat fixed;
 }
 
-.testimonials .carousel{
-    height:22rem;
-}
 .testimonials .header{
     color:white;
 }
 
-.testimonials .carousel-inner{
+.testimonials .carousel .carousel-inner{
     width:75%;
     margin: 0 auto;
 }
 
-.testimonials .carousel-item p{
+.testimonials .carousel .carousel-inner .carousel-item{
+    height:56rem;
+}
+
+
+.testimonials .carousel .carousel-inner .carousel-item p{
     color:white;
 }
+
+
+@media(min-width:767px){
+    .testimonials .carousel .carousel-inner .carousel-item{
+        height:22rem;
+    }
+
+}
+
 
 /*Contact Section*/
 .contact{
     background-color:white;
 }
 
-.contact .info a h5 strong, .contact .info a:hover{
-    color:#313131;
-    text-decoration:none;
-}
-
-.contact .link{
-    color: rgb(68,131,154);
-    text-decoration: underline;
-}
-
-
-
-.info{
+.contact .info{
     text-align:center;
     margin-bottom: 1.5rem;
 }
 
-.fa-circle{
+.contact .info .label, .contact .info a:hover{
+    color:#313131;
+    text-decoration:none;
+}
+
+.contact .info .link{
+    color: rgb(68,131,154);
+    text-decoration: underline;
+}
+
+.contact .info .fa-circle{
     color: #44839A;
 }
 
-.form-column{
+.contact .form{
     margin-top:4rem;
     margin-bottom:4rem;
 }
 
-.form-control{
+.contact .form .form-group .form-control{
      border: .2rem solid rgba(68,131,154, 0.5);
 }
 
-.form-control:focus{
+.contact .form .form-group .form-control:focus{
     border: .2rem solid rgba(52,52,52,0.5);
 }
 
-form .form-group input, form .form-group textarea{
+.contact .form .form-group input, .contact .form .form-group textarea{
     padding:1rem;
     border-radius:0.5rem;
 }
 
-.submit{
+.contact .form .submit{
     background-color: #44839A;
     color:white;
     border: .1rem solid transparent;
@@ -644,13 +653,13 @@ form .form-group input, form .form-group textarea{
 /*Footer*/
 .footer{
     background-color:rgb(52, 52, 52);
-    height:10rem;
     color:white;
+    padding:0px;
 }
 
 .footer p{
     width:100%;
-    margin:3rem;
+    padding:2rem 0.7rem;
 }
 
 .footer span:first-child{
@@ -666,4 +675,16 @@ form .form-group input, form .form-group textarea{
 
 .footer span:nth-child(2){
     float:right;
+}
+
+
+@media(min-width:767px){
+    .footer{
+        height:10rem;
+    }
+
+    .footer p{
+        width:100%;
+        margin:3rem;
+    }
 }
