@@ -192,7 +192,7 @@ function calculateRotation(rotation, oldCoords, cx, cy){
 }
 
 function drawCircle(oldShape){
-      $(".skills-image .shapes path").each(function(){
+      $(".skill-section .shapes path").each(function(){
         
         var newShape = {
             pointOne : {},
@@ -234,7 +234,7 @@ function drawCircle(oldShape){
 }
 
 function drawLabels(labelCoords, rotation){
-    $(".skills .skills-image .labels foreignObject").each(function(){
+    $(".skills .skill-section .labels foreignObject").each(function(){
         
         var newCoords = new Object()
         
@@ -249,7 +249,7 @@ function drawLabels(labelCoords, rotation){
 }
 
 function generateSkillsCircle (){
-    var posOne = $(".skills-image .shapes path:first-child").attr("d");
+    var posOne = $(".skill-section .shapes path:first-child").attr("d");
     var coords = posOne.split(" ");
 
     var oldShape =  {
@@ -270,8 +270,8 @@ function generateSkillsCircle (){
     drawCircle(oldShape);
     
     var labelCoords = new Object();
-    labelCoords.x = parseFloat($(".skills-image .labels foreignObject:first-child").attr("x"))+65
-    labelCoords.y = parseFloat($(".skills-image .labels foreignObject:first-child").attr("y"))+50
+    labelCoords.x = parseFloat($(".skill-section .labels foreignObject:first-child").attr("x"))+65
+    labelCoords.y = parseFloat($(".skill-section .labels foreignObject:first-child").attr("y"))+50
     
     console.log(labelCoords);
     drawLabels(labelCoords, 60)
@@ -281,7 +281,7 @@ function generateSkillsCircle (){
 
 function labelLookup(){
     oldCoords = new Object();
-    $(".skills .skills-image .labels foreignObject").each(function(){
+    $(".skills .skill-section .labels foreignObject").each(function(){
         var lookup = this.id.replace("label","")
         var coords = new Object();
         coords.x =  $(this).attr('x');
@@ -299,7 +299,7 @@ function updateLabelCoords(rotation){
     var oldCoords = labelLookup()
     console.log(oldCoords)
     
-    $(".skills .skills-image .labels foreignObject").each(function(){
+    $(".skills .skill-section .labels foreignObject").each(function(){
 
         var id = parseInt($(this).attr('id').replace("label",""))
         var newPos = parseInt((id+rotation)%6);
@@ -317,13 +317,13 @@ function updateShapeCoords(rotation){
     
     var oldValues = new Object();
 
-    $(".skills .skills-image .shapes path").each(function(){
+    $(".skills .skill-section .shapes path").each(function(){
         var lookup = this.id
         oldValues[lookup] = $(this).attr('d'); 
     })
     
     
-    $(".skills .skills-image .shapes path").each(function(){
+    $(".skills .skill-section .shapes path").each(function(){
         var id = parseInt(this.id)
         var newPos = parseInt(id+rotation)%6;
         $(this).attr('id',newPos);
@@ -446,7 +446,7 @@ $(".skill-section-mobile .custom-select").change(function(){
 
 
 
-$(".skills .skills-image .shapes path, .skills .skills-image .labels foreignObject").on('click', function(){
+$(".skills .skill-section .shapes path, .skills .skill-section .labels foreignObject").on('click', function(){
 
     //Get Click ID and calculate rotation num
     var id = parseInt(this.id.replace("label",""));
@@ -455,11 +455,11 @@ $(".skills .skills-image .shapes path, .skills .skills-image .labels foreignObje
     
    //Create Rotation Animation, inject into DOM
     var rotationAnimation = createRotation(rotation);
-    $(".skills .skills-image .shapes").append(rotationAnimation)
+    $(".skills .skill-section .shapes").append(rotationAnimation)
 
     oldCoords = labelLookup();
 
-    $(".skills .skills-image .labels foreignObject").each(function(){
+    $(".skills .skill-section .labels foreignObject").each(function(){
         var labelId = parseInt($(this).attr('id').replace('label',''))
         rotAnim2 = createTranslation(rotation, oldCoords, labelId);
         $(this).append(rotAnim2);
