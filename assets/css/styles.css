@@ -111,13 +111,15 @@ ul{
     color:#44839A;
 }
 
-.navbar-toggler{
-    margin-top:.8rem;
+.navbar-toggler span{
+    color:white;
+    font-size:3rem;
 }
 
-.navbar-toggler>span{
+.navbar-toggler p{
+    font-size:1.6rem;
     color:white;
-    font-size:2.2rem;
+    margin:0rem;
 }
 
 .navbar-brand img{
