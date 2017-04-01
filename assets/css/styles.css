@@ -400,7 +400,7 @@ select.minimal {
 .portfolio .project{
     height:28rem;
     max-width:55.2rem;
-    border-bottom: 2.2rem solid #313131;
+    border: 1.2rem solid #313131;
     overflow: hidden;
     cursor: pointer;
     padding:0rem;    
