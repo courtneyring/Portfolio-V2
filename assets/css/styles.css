@@ -1,3 +1,12 @@
+/*
+xs 0-575px
+sm 576-767px
+md 768-991px
+lg 992-1199px
+xl 1200+
+*/
+
+
 /*Body */
 html{
     font-size:62.5%;
@@ -298,10 +307,7 @@ ul{
     display:none;
 }
 
-.skill-section svg{
-    margin-left: 9rem;
-    margin-right: 4rem;
-}
+
 
 .skills .skill-section foreignObject{
     color:white;
@@ -353,9 +359,17 @@ select.minimal {
     border:0px;
 }
 
-@media(min-width:767px){
+@media(min-width:768px){
     .skill-section-mobile{
         display:none;
+    }
+
+}
+
+@media(min-width:992px){
+    .skill-section svg{
+        margin-left: 9rem;
+        margin-right: 4rem;
     }
 }
 
@@ -371,7 +385,7 @@ select.minimal {
 }
 
 
-@media(min-width:767px){
+@media(min-width:768px){
      .skills-content .content-section{
         display:none;
         margin-left:0rem;
