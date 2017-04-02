@@ -63,15 +63,15 @@ ul{
 
 @media(min-width:576px){
    h1{
-    font-size:3rem;
+    font-size:4rem;
     }
 
     h2{
-        font-size:2rem;
+        font-size:3.4rem;
     }
 
     h3{
-        font-size:2rem;
+        font-size:2.4rem;
     }
 
     p, li{
@@ -233,7 +233,7 @@ ul{
 
 .wording h1 span, .wording h2 span{
     color:white;
-    background-color:rgba(52, 52, 52, 0.65);
+    background-color:rgba(52, 52, 52, 0.8);
     line-height:1.3;
 }
 
@@ -307,7 +307,9 @@ ul{
     display:none;
 }
 
-
+.skills .skill-section svg{
+    width:100%;
+}
 
 .skills .skill-section foreignObject{
     color:white;
@@ -455,6 +457,9 @@ select.minimal {
     left: 0;
     background-color: rgba(52, 52, 52, 0.8);
 
+}
+
+@media(min-width:767px){
 }
 
 @media(min-width:767px){

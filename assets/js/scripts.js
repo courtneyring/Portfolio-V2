@@ -30,7 +30,7 @@ $(".nav-item a, .arrow, .footer a, .navbar-brand").on('click', function(e) {
 
 
 $('body').scrollspy({
-   offset: $("nav").outerHeight()
+   offset: $("nav").outerHeight()+1
 });
 
 
