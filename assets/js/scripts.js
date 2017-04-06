@@ -35,8 +35,13 @@ $('body').scrollspy({
 
 
 $(function(){
-    var landingOffset = $(window).height()-$("nav").outerHeight()
-    $('.landing').css('height', landingOffset)
+    if($(window).width()<768){
+        var landingOffset = $(window).height()-$("nav").outerHeight()
+        $('.landing').css('height', landingOffset)
+    }
+    else{
+        $('.landing').css('height', '100vh')
+    }
 })
 
 //---------Navbar color change-------//
