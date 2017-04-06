@@ -34,7 +34,10 @@ $('body').scrollspy({
 });
 
 
-
+$(function(){
+    var landingOffset = $(window).height()-$("nav").outerHeight()
+    $('.landing').css('height', landingOffset)
+})
 
 //---------Navbar color change-------//
 function checkScroll(){

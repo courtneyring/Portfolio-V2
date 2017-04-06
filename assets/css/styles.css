@@ -12,7 +12,7 @@ html{
     font-size:62.5%;
 }
 
-body{
+/*body{
     margin-top:-6.4rem;
 }
 
@@ -21,7 +21,7 @@ body{
     body{
         margin-top:-10rem;
     }
-}
+}*/
 
 /*Fonts*/
 h1, h2, h3, h4, h5, h6, p, a, li{
@@ -201,9 +201,9 @@ ul{
 
 
 /*Landing*/
-.landing{
+/*.landing{
     height:100vh;
-}
+}*/
 
 .technical{
     background-image: url(/assets/images/technical.jpg);
