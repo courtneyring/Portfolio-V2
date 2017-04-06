@@ -158,9 +158,8 @@ $(function(){
         $(".modalPortfolio .modal-header .title").text(title);
         
 
-        var desc = JSON.stringify((data[key].description).replace(/\n/g,'<br />'))
-        
-        $(".modalPortfolio .modal-body .description").text(desc);
+        var desc = (data[key].description).replace(/\n/g, '<br />')
+        $(".modalPortfolio .modal-body .description").html(desc);
         
         var company = data[key].company;
         $(".modalPortfolio .modal-body .company").text(company);
@@ -295,7 +294,7 @@ function labelLookup(){
 function updateLabelCoords(rotation){
     
     $(".skills .labels animateMotion").remove()
-    
+   
     var oldCoords = labelLookup()
     console.log(oldCoords)
     
@@ -308,9 +307,13 @@ function updateLabelCoords(rotation){
         $(this).attr('y',oldCoords[newPos].y);
 
         $(this).attr('id',"label"+newPos);
+        
+        $(this).remove();
+        $(".labels").append(this);
 
     })
-   
+    
+
 }
 
 function updateShapeCoords(rotation){
@@ -383,9 +386,7 @@ function createTranslation(rotation, oldCoords, id){
 
             var orig = oldCoords[(id+x)%6]
             var dest = oldCoords[(id+(x+1))%6]
-
-
-            var newString = ' a240 240 0 0 1' +  parseFloat(dest.x-orig.x) + ' ' + parseFloat(dest.y-orig.y)
+            var newString = ' a240 240 0 0 1 ' +  parseFloat(dest.x-orig.x) + ' ' + parseFloat(dest.y-orig.y)
 
             pathString+=newString
         }
@@ -397,7 +398,7 @@ function createTranslation(rotation, oldCoords, id){
     var animation = document.createElementNS(
                          'http://www.w3.org/2000/svg', 'animateMotion');
     animation.setAttributeNS(null,'dur', '2s');
-    //animation.setAttributeNS(null,'fill', 'freeze');
+    animation.setAttributeNS(null,'fill', 'freeze');
     animation.setAttributeNS(null,'begin', 'circle.begin');
     animation.setAttributeNS(null, 'path', pathString);
     //animation.setAttributeNS(null, 'onend', 'updateLabelCoords('+id+',' +Destination.x+','+Destination.y+','+rotation+')')
@@ -444,12 +445,9 @@ $(".skill-section-mobile .custom-select").change(function(){
 })
 
 
-
-
-$(".skills .skill-section .shapes path, .skills .skill-section .labels foreignObject").on('click', function(){
-
-    //Get Click ID and calculate rotation num
-    var id = parseInt(this.id.replace("label",""));
+function clickEvent(el){
+     //Get Click ID and calculate rotation num
+    var id = parseInt(el.id.replace("label",""));
     if (id===0){return;}
     var rotation = parseInt(6-id);
     
@@ -463,12 +461,13 @@ $(".skills .skill-section .shapes path, .skills .skill-section .labels foreignOb
         var labelId = parseInt($(this).attr('id').replace('label',''))
         rotAnim2 = createTranslation(rotation, oldCoords, labelId);
         $(this).append(rotAnim2);
+        
     })
-    
     displaySkill(id, rotation)
     rotationAnimation.beginElement(); 
     
-})
+}
+
 
 
 $(function(){

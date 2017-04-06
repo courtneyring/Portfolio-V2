@@ -292,7 +292,7 @@ ul{
 
 @media(min-width:992px){
     .about{
-        min-height:90vh;
+        /*min-height:90vh;*/
         background-position: 90% 13%;
         background-attachment:fixed;
     }
@@ -304,6 +304,11 @@ ul{
     margin-bottom:3rem;
 }
 
+@media(min-width:992px){
+    .skills .skills-intro{
+        margin-bottom:1rem;
+    }
+}
 
 /*Skills Section - Selector Desktop*/
 .skills .skill-section{
@@ -320,11 +325,15 @@ ul{
     display:table;
 }
 
-.skills .skills-section foreignObject div{
+.skills .skill-section foreignObject div{
     display:table-cell;
     height:100px;
     vertical-align:middle;
 }
+
+/*.skills .skill-section .shapes{
+    display:none;
+}*/
 
 @media(min-width:768px){
     .skills .skill-section{
@@ -332,7 +341,12 @@ ul{
     }   
 }
 
-
+@media(min-width:992px){
+    .skill-section svg{
+        padding-left: 9rem;
+        padding-right: 4rem;
+    }
+}
 
 /*Skills Section - Selector Mobile*/
 .skill-section-mobile .custom-select{
@@ -358,9 +372,7 @@ ul{
   background-repeat: no-repeat;
 }
 
-select.minimal {
-  
-}
+
 
 .skill-section-mobile .custom-select:focus{
     border:0px;
@@ -373,12 +385,7 @@ select.minimal {
 
 }
 
-@media(min-width:992px){
-    .skill-section svg{
-        margin-left: 9rem;
-        margin-right: 4rem;
-    }
-}
+
 
 /*Skills Section - Selector Content*/
 .skills-content{
@@ -568,6 +575,11 @@ select.minimal {
     font-weight:700;
 }
 
+.modal .modal-body .modal-details .description br{
+    line-height:4rem;
+    
+}
+
 .modal .modal-body .modal-details .specs{
     margin-top:3rem;
     font-weight:700;
@@ -598,7 +610,7 @@ select.minimal {
 
 /*Testimonials Section*/
 .testimonials{
-    background: url(/assets/images/testimonials.jpg) center/cover no-repeat fixed;
+    background: url(/assets/images/testimonials.jpg) center/cover no-repeat scroll;
 }
 
 .testimonials .header{
@@ -621,10 +633,17 @@ select.minimal {
 
 
 @media(min-width:767px){
+    
     .testimonials .carousel .carousel-inner .carousel-item{
         height:22rem;
     }
 
+}
+
+@media(min-width:992){
+    .testimonials{
+        background-attachment:fixed;
+    }
 }
 
 
@@ -652,13 +671,19 @@ select.minimal {
     color: #44839A;
 }
 
-.contact .form{
+/*.contact .form{
     margin-top:4rem;
     margin-bottom:4rem;
+}*/
+
+.contact .form .form-group{
+    font-size:1.9rem;
 }
 
 .contact .form .form-group .form-control{
      border: .2rem solid rgba(68,131,154, 0.5);
+    font-size:2rem;
+    padding:0.5rem;
 }
 
 .contact .form .form-group .form-control:focus{
