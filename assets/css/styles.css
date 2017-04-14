@@ -207,9 +207,9 @@ ul{
 
 
 /*Landing*/
-/*.landing{
-    height:100vh;
-}*/
+.landing{
+    margin-top:-0.1rem;
+}
 
 .technical{
     background-image: url(/assets/images/technical.jpg);
@@ -278,7 +278,8 @@ ul{
 
 /*About Section*/
 .about{
-    background: url(/assets/images/about.jpg) 90% 23%/cover no-repeat scroll;
+    /*background: url(/assets/images/about.jpg) 90% 23%/cover no-repeat scroll;*/
+    background: url(/assets/images/about-test.png) 90% 23%/cover no-repeat scroll;
 }
 
 .about h2{
@@ -300,7 +301,8 @@ ul{
 @media(min-width:992px){
     .about{
         /*min-height:90vh;*/
-        background-position: 90% 13%;
+        background-size:113%;
+        background-position: 0% 0%;
         background-attachment:fixed;
     }
 }
