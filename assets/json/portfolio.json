@@ -2,7 +2,7 @@
 	"floorcast": {
 		"title": "FloorCast",
         "image": "/assets/images/floorcast-logo.jpg",
-		"description": "During my final semester at the University of Michigan, I worked on a responsve web application that displayed the ____ of our undergraduate library. The school provided us data via automated email every five minutes that detailed how many devices were connected to each router in the building at that time. Since there are 3 routers on each floor, we were able to estimate the amount of people in each area of each floor of the building. A Java application was built to pull those numbers from the emails and add them to the database.<br>My role in the project was development of the front end and framework of the application. I used Flask to pull the data from the database and run the application using those numbers. I designed the front end using AxureRP and the front end development used HTML/CSS and a few JavaScript libraries.",
+		"description": "During my final semester at the University of Michigan, I worked on a responsive web application that displayed the ____ of our undergraduate library. The school provided us with data via automated email every five minutes that detailed how many devices were connected to each router in the building at that time. Since there are 3 routers on each floor, we were able to estimate the amount of people in each area of each floor of the building. A Java application was built to pull those numbers from the emails and add them to the database.<br>My role in the project was development of the front end and framework of the application. I used Flask to pull the data from the database and run the application using those numbers. I designed the front end using AxureRP and the front end development used HTML/CSS and a few JavaScript libraries.",
         "company": "personal",
 		"date": "9/30/2014",
 		"skills": "Flask, SQL, HTML, CSS, JS",
@@ -12,9 +12,9 @@
 	"cchs": {
 		"title": "Crawford County Historical Society Website",
         "image": "/assets/images/portfolio/cchs/cchs-exhibits.png",
-		"description": "As part of the efford to raise money for the Crawford County Historical Society Foundation Fund, I offered to revamp the society's website in order to increase awareness and give the society an improved digital presence in order for patrons(?) to get more information.<br>I used AxureRP to mock up the site and get feedback from a few board members before starting the development. The website is an angular application built with HTML5/Bootstrap3 and a document-oriented database. Lastly, the website uses PHP mailer for contact and newsletter submissions.<br>Once the site was in production, I worked on improving the search engine optimization of the site. Since the society was transitioning from one site to another, the google business account as well as several Grayling area websites needed to be updated. I also....",
+		"description": "As part of the effort to raise money for the Crawford County Historical Society Foundation Fund, I offered to revamp the society's website in order to increase awareness and give the society an improved digital presence in order for patrons(?) to get more information.<br>I used AxureRP to mock up the site and get feedback from a few board members before starting the development. The website is an angular application built with HTML5/Bootstrap3 and a document-oriented database. Lastly, the website uses PHP mailer for contact and newsletter submissions.<br>Once the site was in production, I worked on improving the search engine optimization of the site. Since the society was transitioning from one site to another, the google business account as well as several Grayling area websites needed to be updated. I also....",
         "company": "CCHS",
-		"date": "9/30/2014",
+		"date": " 1/15/2017",
 		"skills": "AngularJS, HTML, CSS, PHP, SEO, JSON",
 		"website": "crawfordcountyhistoricalsociety.com",
         "thumbnail":"/assets/images/portfolio/cchs/cchs-thumbnail.jpg" 
@@ -22,7 +22,7 @@
     "ifp": {
 		"title": "Cigna Individual & Family Plans",
         "image": "/assets/images/portfolio/ifp/ifp-landing-full.png",
-		"description": "Every year, Cigna holds its open enrollement period for individual and family plans between the months of October and January(?). As part of the preparation for this period, the website and plans must be updated an ready for release on Day 1. <br> The most complex piece of this project was the plan finder application. We decided to move the backend from Java to AngularJS. I also created a Python script to pull multiple excel sheets of data into one XML file to automate the effor rather than by hand as it had been done before.<br>Additionally, I hand coded a microsite for Illinois customers from a UI spec created by an external agency. I also created a script to generate Teamsite components from excel sheets and worked on various new pages and content updates.",
+		"description": "Every year, Cigna holds its open enrollment period for individual and family plans between the months of October and January(?). As part of the preparation for this period, the website and plans must be updated an ready for release on Day 1. <br> The most complex piece of this project was the plan finder application. We decided to move the backend from Java to AngularJS. I also created a Python script to pull multiple excel sheets of data into one XML file to automate the effort rather than by hand as it had been done before.<br>Additionally, I hand-coded a microsite for Illinois customers from a UI spec created by an external agency. I also created a script to generate Teamsite components from excel sheets and worked on various new pages and content updates.",
         "company": "Cigna",
 		"date": "10/1/2016",
 		"skills": "HP Teamsite, Python, HTML, CSS, JS",
@@ -32,7 +32,7 @@
     "medicare": {
 		"title": "Cigna Medicare 2017",
         "image": "/assets/images/portfolio/medicare/medicare-plan-finder.png",
-		"description": "Every year, the Cigna HealthSpring/Medicare website needs to be updated with the new year's plans and content in order to give the customers accurate information and stay compliant with the Center of Medicare and Medicaid Services. For this project, we worked with our Healthspring partners in Nashville to prepare the website for launch on October 1, 2016. <br> In previous years, the data was managed on several spreadsheets and converted into a single JSON file using excel formulas, which was tedious and vulnerable to error. To expedite this process, I created a python script that took the data from various data spreadsheets they provided, and converted it into JSON to be used by the plan finder Angular application<br>I also participated in content updates and defect correction leading up to the release. ",
+		"description": "Every year, the Cigna HealthSpring/Medicare website needs to be updated with the new year's plans and content in order to give the customers accurate information and stay compliant with the Center of Medicare and Medicaid Services. For this project, we worked with our Healthspring partners in Nashville to prepare the website for launch on October 1, 2016. <br> In previous years, the data was managed on several spreadsheets and converted into a single JSON file using excel formulas, which was tedious and vulnerable to error. To expedite this process, I created a python script that took the data from various data spreadsheets they provided, and converted it into JSON to be used by the plan finder Angular application.<br>I also participated in content updates and defect correction leading up to the release. ",
         "company": "Cigna",
 		"date": "11/1/2016",
 		"skills": "HP Teamsite, Python, JSON",
@@ -42,7 +42,7 @@
     "hongkong": {
 		"title": "Cigna Hong Kong",
         "image": "/assets/images/portfolio/hongkong/hk-landing-cn.png",
-		"description": "One of our biggest projects in Q4 2016 was working with our partners in Hong Kong to get their site migrated onto HP Teamsite Content Manager. As part of this efford, we revamped their site with a brand new UI/UX experience and the addition of various pages.<br>My primary role on this project was updating content and the user interface asbusiness requirements changed during the development timeline. I also worked on defect correction of the site identified by our Quality Assurance team and the Business team in Hong Kong.",
+		"description": "One of our biggest projects in Q4 2016 was working with our partners in Hong Kong to get their site migrated onto HP Teamsite Content Manager. As part of this effort, we revamped their site with a brand new UI/UX experience and the addition of various pages.<br>My primary role on this project was updating content and the user interface as business requirements changed during the development timeline. I also worked on defect correction of the site identified by our Quality Assurance team and the Business team in Hong Kong.",
         "company": "Cigna",
 		"date": "12/16/2016",
 		"skills": "HTML, CSS, XSL, HP Teamsite",
@@ -52,7 +52,7 @@
     "dxs": {
 		"title": "Cigna Digital Experience Standards",
         "image": "/assets/images/portfolio/dxs/dxs-thumbnail.png",
-		"description": "A project from the Global Vice President of Digital Marketing, the digital experience standards received a lot of visibility, not only from the Digital Marketing team, but for both the Marketing and IT Department as a whole. The idea was to create standards for user experience design across all of Cigna's digital properties in order to create a more 'accessible, customer-centric, insights driven end-to-end digital experience for tens of millions of users'. <br> Working with the Digital Marketing team and an external agency, I took on the role as lead developer for this project. We recieved the code from the agency, and it was my task to turn that code in to Teamsite components and pages.<br>Once the site was launched, I worked on the User Experience Team to further improve the content and UI, as well as keep the stardards accurate and up-to-date",
+		"description": "In October 2016, a project came from the Global Vice President of Digital Marketing. She wanted a more 'accessible, customer-centric, insights driven end-to-end digital experience for tens of millions of users'. As a result, the standards become our number one priority. <br> Working with the Digital Marketing team and an external agency, I took on the role as lead developer for this project. We recieved the code from the agency, and it was my task to turn that code in to Teamsite components and pages.<br>Once the site was launched, I worked on the User Experience Team to further improve the content and UI, as well as keep the stardards accurate and up-to-date.",
         "company": "Cigna",
 		"date": "1/19/2017",
 		"skills": "HTML, CSS, XSL, HP Teamsite",
