@@ -611,6 +611,11 @@ ul{
     .modal .modal-header button{
         margin-bottom:0;
     }
+    
+    .modal .modal-body .modal-details{
+        margin-top:0rem;
+    }
+    
     .modal .modal-body .modal-details .specs{
         margin-top:5rem;
     }
