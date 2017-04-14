@@ -286,15 +286,22 @@ ul{
     color:white;
 }
 
+.about a{
+    color: #44839A;
+}
+
 .about-headline{
     color:white;
 }
 
 .about-blurb{
     color:white;
-    background-color:rgba(52, 52, 52, 0.55);
+    background-color:rgba(52, 52, 52, 0.75);
     padding:1rem;
-    box-shadow: 0rem 0rem 4.5rem rgba(52, 52, 52, 1);
+    box-shadow: 2rem 2rem 4.5rem rgba(52, 52, 52, 0.4),
+        2rem -2rem 4.5rem rgba(52, 52, 52, 0.4),
+        -2rem -2rem 4.5rem rgba(52, 52, 52, 0.4),
+        -2rem 2rem 4.5rem rgba(52, 52, 52, 0.4);
     border-radius: .7rem;
 }
 
