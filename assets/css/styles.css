@@ -298,10 +298,10 @@ ul{
     color:white;
     background-color:rgba(52, 52, 52, 0.75);
     padding:1rem;
-    box-shadow: 2rem 2rem 4.5rem rgba(52, 52, 52, 0.4),
-        2rem -2rem 4.5rem rgba(52, 52, 52, 0.4),
-        -2rem -2rem 4.5rem rgba(52, 52, 52, 0.4),
-        -2rem 2rem 4.5rem rgba(52, 52, 52, 0.4);
+    box-shadow: 2rem 2rem 4.5rem rgba(52, 52, 52, 0.5),
+        2rem -2rem 4.5rem rgba(52, 52, 52, 0.5),
+        -2rem -2rem 4.5rem rgba(52, 52, 52, 0.5),
+        -2rem 2rem 4.5rem rgba(52, 52, 52, 0.5);
     border-radius: .7rem;
 }
 
