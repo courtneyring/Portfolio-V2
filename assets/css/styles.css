@@ -402,11 +402,15 @@ ul{
 
 
 
-/*Skills Section - Selector Content*/
+/*Skills Section -  Content*/
 .skills-content{
     text-align:left;
     margin-top:auto;
     margin-bottom:auto;
+}
+
+.skills-content br{
+    line-height:4rem;
 }
 
 
