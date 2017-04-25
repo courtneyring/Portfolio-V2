@@ -151,6 +151,8 @@ $(function(){
     
     $(".project").on('click',function(){
         
+        ga('send', 'event', 'click', 'project');  
+        
         var key = $(this).children(".project-inner").attr("id");
         var id = $(this).find("a").attr("href").replace('#','');
         $(".modalPortfolio").attr("id",id);
@@ -455,6 +457,9 @@ $(".skill-section-mobile .custom-select").change(function(){
 
 function clickEvent(el){
      //Get Click ID and calculate rotation num
+    
+    ga('send', 'event', 'click', 'skillsCircle');  
+    
     var id = parseInt(el.id.replace("label",""));
     if (id===0){return;}
     var rotation = parseInt(6-id);
@@ -490,3 +495,16 @@ $(function(){
 $(window).on("scroll", function(){
     ga('send', 'event', 'interaction', 'scroll');  
 })
+
+
+$(".nav-item a, .navbar-brand").on('click', function(e) {
+    ga('send', 'event', 'click', 'navbar');  
+})
+                                   
+$(".about .about-blurb #resume").on('click', function(e) {
+    ga('send', 'event', 'click', 'resume');  
+})
+                                    
+$(".contact .info #linkedin").on('click', function(e) {
+    ga('send', 'event', 'click', 'linkedin');  
+}
