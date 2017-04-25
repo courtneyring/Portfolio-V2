@@ -1,7 +1,7 @@
 //--------Smoothscroll Function---------//
 //$("nav ul li a[href^='#']").on('click', function(e) {
 $(".nav-item a, .arrow, .footer a, .navbar-brand").on('click', function(e) {
-
+    ga('send', 'event', 'navigation'); 
    e.preventDefault();
 
    var hash = this.hash;
@@ -42,6 +42,14 @@ $(function(){
     else{
         $('.landing').css('height', '100vh')
     }
+})
+
+$(function(){
+    $(window).on("activate.bs.scrollspy", function(){
+        var activePage = $(".nav-link.active").text();
+        console.log(activePage)
+        ga('send', 'pageview', activePage);
+    })
 })
 
 //---------Navbar color change-------//
@@ -151,7 +159,8 @@ $(function(){
     
     $(".project").on('click',function(){
         
-        ga('send', 'event', 'click', 'project');  
+        var project = $(this).find("a").text()
+        ga('send', 'event', 'projects', 'view', project);  
         
         var key = $(this).children(".project-inner").attr("id");
         var id = $(this).find("a").attr("href").replace('#','');
@@ -186,6 +195,10 @@ $(function(){
     });
 })
 
+
+$(".modalPortfolio .modal-body .website").on('click',function(){
+    ga('send', 'event', 'projects', 'link', $(".modalPortfolio .modal-body .website").text());  
+})
 
 //---------Skills Circle Generation and Animation ----//
 function calculateRotation(rotation, oldCoords, cx, cy){
@@ -457,10 +470,14 @@ $(".skill-section-mobile .custom-select").change(function(){
 
 function clickEvent(el){
      //Get Click ID and calculate rotation num
+    var category = "label"+(el.id.replace("label",""));
+    console.log($('#'+category + " p").text())
     
-    ga('send', 'event', 'click', 'skillsCircle');  
+    ga('send', 'event', 'skills', 'view', $('#'+category + " p").text());  
     
     var id = parseInt(el.id.replace("label",""));
+    
+
     if (id===0){return;}
     var rotation = parseInt(6-id);
     
@@ -492,19 +509,17 @@ $(function(){
 
 
 /*-------Analytics --------*/
-$(window).on("scroll", function(){
-    ga('send', 'event', 'interaction', 'scroll');  
-})
-
-
-$(".nav-item a, .navbar-brand").on('click', function() {
-    ga('send', 'event', 'click', 'navbar');  
-})
-                                   
+                                
 $(".about .about-blurb #resume").on('click', function() {
-    ga('send', 'event', 'click', 'resume');  
+    ga('send', 'event', 'about', 'download', 'resume');  
+})
+
+$(".about .about-blurb a:not(#resume)").on('click', function() {
+    console.log($(this).attr('href'))
+    ga('send', 'event', 'about', 'link', $(this).attr('href'));  
 })
                                     
-$(".contact .info #linkedin").on('click', function() {
-    ga('send', 'event', 'click', 'linkedin');  
+$(".contact .info a").on('click', function() {
+    console.log($(this).attr('id'))
+    ga('send', 'event', 'contact', $(this).attr('id'));  
 })
