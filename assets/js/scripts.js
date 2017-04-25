@@ -482,3 +482,11 @@ $(function(){
     generateSkillsCircle();
 
 })
+
+
+
+
+/*-------Analytics --------*/
+$(window).on("scroll", function(){
+    ga('send', 'event', 'interaction', 'scroll');  
+})
