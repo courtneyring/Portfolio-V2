@@ -497,14 +497,14 @@ $(window).on("scroll", function(){
 })
 
 
-$(".nav-item a, .navbar-brand").on('click', function(e) {
+$(".nav-item a, .navbar-brand").on('click', function() {
     ga('send', 'event', 'click', 'navbar');  
 })
                                    
-$(".about .about-blurb #resume").on('click', function(e) {
+$(".about .about-blurb #resume").on('click', function() {
     ga('send', 'event', 'click', 'resume');  
 })
                                     
-$(".contact .info #linkedin").on('click', function(e) {
+$(".contact .info #linkedin").on('click', function() {
     ga('send', 'event', 'click', 'linkedin');  
-}
+})
