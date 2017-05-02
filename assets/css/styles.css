@@ -269,6 +269,7 @@ ul{
 
 .wording .definition{
     margin:auto;
+    max-width:100rem;
 }
 
 .wording .arrow{
@@ -696,7 +697,7 @@ ul{
 @media(min-width:767px){
     
     .testimonials .carousel .carousel-inner .carousel-item{
-        height:22rem;
+        height:30rem;
     }
 
 }
@@ -736,6 +737,11 @@ ul{
     margin-top:4rem;
     margin-bottom:4rem;
 }*/
+
+.contact .form form{
+    max-width:80rem;
+    margin:0 auto;
+}
 
 .contact .form .form-group{
     font-size:1.9rem;
