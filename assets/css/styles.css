@@ -394,8 +394,8 @@ ul{
 
 @media(min-width:992px){
     .skill-section svg{
-        padding-left: 9rem;
-        padding-right: 4rem;
+        padding-left: 8rem;
+        padding-right: 3rem;
     }
 }
 
@@ -466,7 +466,7 @@ ul{
 
 @media(min-width:992px){
      .skills-content .content-list{
-        margin-top:5rem;
+        margin-top:4rem;
     }
 }
 
