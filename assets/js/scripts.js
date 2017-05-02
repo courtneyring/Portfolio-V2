@@ -141,7 +141,7 @@ window.onload = function() {
 $(function(){
     
     var data = {}
-    console.log("here")
+
     
     $.getJSON("/assets/json/portfolio.json", function(json) {
         
@@ -180,6 +180,7 @@ $(function(){
         
 
         var desc = (data[key].description).replace(/\n/g, '<br />')
+
         $(".modalPortfolio .modal-body .description").html(desc);
         
         var company = data[key].company;
@@ -192,7 +193,15 @@ $(function(){
         $(".modalPortfolio .modal-body .date").text(date);
         
         var website = data[key].website;
-        $(".modalPortfolio .modal-body .website").text(website);
+
+        if (!website){
+            console.log("here")
+            $(".modalPortfolio .modal-body .website").parent().parent().css('display','none')
+        }
+        else{
+            $(".modalPortfolio .modal-body .website").parent().parent().css('display','table-row')
+            $(".modalPortfolio .modal-body .website").html(website);
+        }
 
     });
 })

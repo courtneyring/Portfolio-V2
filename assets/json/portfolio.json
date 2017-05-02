@@ -6,7 +6,7 @@
         "company": "personal",
 		"date": "9/30/2014",
 		"skills": "Flask, SQL, HTML, CSS, JS",
-		"website": "floorcast.info",
+		"website": "",
         "thumbnail":"/assets/images/portfolio/floorcast/floorcast-thumbnail.jpg" 
 	},
 	"cchs": {
@@ -16,7 +16,7 @@
         "company": "CCHS",
 		"date": " 1/15/2017",
 		"skills": "AngularJS, HTML, CSS, PHP, SEO, JSON",
-		"website": "crawfordcountyhistoricalsociety.com",
+		"website": "<a href=\"crawfordcountyhistoricalsociety.com\" target=\"_blank\">crawfordcountyhistoricalsociety.com</a>",
         "thumbnail":"/assets/images/portfolio/cchs/cchs-thumbnail.jpg" 
 	}, 
     "ifp": {
@@ -26,7 +26,7 @@
         "company": "Cigna",
 		"date": "10/1/2016",
 		"skills": "HP Teamsite, Python, HTML, CSS, JS",
-		"website": "cigna.com/individuals-families",
+		"website": "<a href=\"www.cigna.com/individuals-families\" target=\"_blank\">www.cigna.com/individuals-families</a>",
         "thumbnail":"/assets/images/portfolio/ifp/ifp-thumbnail.jpg" 
 	}, 
     "medicare": {
@@ -36,7 +36,7 @@
         "company": "Cigna",
 		"date": "11/1/2016",
 		"skills": "HP Teamsite, Python, JSON",
-		"website": "cigna.com/medicare",
+		"website": "<a href=\"www.cigna.com/medicare\" target=\"_blank\">www.cigna.com/medicare</a>",
         "thumbnail":"/assets/images/portfolio/medicare/medicare-thumbnail.jpg" 
 	},
     "hongkong": {
@@ -46,7 +46,7 @@
         "company": "Cigna",
 		"date": "12/16/2016",
 		"skills": "HTML, CSS, XSL, HP Teamsite",
-		"website": "cigna.com.hk",
+		"website": "<a href=\"www.cigna.com.hk\" target=\"_blank\">cigna.com.hk</a>",
         "thumbnail":"/assets/images/portfolio/hongkong/hongkong-thumbnail.jpg" 
 	},
     "dxs": {

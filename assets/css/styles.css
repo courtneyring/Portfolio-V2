@@ -650,6 +650,13 @@ ul{
     font-weight:700;
 }
 
+.modal .modal-body .modal-details table{
+    width: 100%;
+    table-layout: fixed;
+    word-wrap:break-word;
+    vertical-align:top;
+}
+
 .modal .modal-body .modal-details .specs td:nth-child(2){
     padding-left:4rem;
 }
