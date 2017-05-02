@@ -507,6 +507,11 @@ $(function(){
 
 })
 
+//--------Refresh on Orientation Change -------//
+window.addEventListener("orientationchange", function() {
+    location.reload()
+});
+
 
 /*-------Analytics --------*/
                                 
