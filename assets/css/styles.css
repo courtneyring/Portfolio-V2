@@ -307,9 +307,9 @@ ul{
 
 @media(min-width:992px){
     .about{
-        /*min-height:90vh;*/
+        /*min-height:90vh;
         background-size:113%;
-        background-position: 0% 0%;
+        background-position: 0% 0%;*/
         background-attachment:fixed;
     }
 }
