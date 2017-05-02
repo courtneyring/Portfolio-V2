@@ -141,10 +141,12 @@ window.onload = function() {
 $(function(){
     
     var data = {}
+    console.log("here")
     
     $.getJSON("/assets/json/portfolio.json", function(json) {
+        
         data = json;
-
+        
     }).then(function(){
          $(".portfolio .portfolio-images .project-inner").each(function(){
             
