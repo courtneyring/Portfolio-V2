@@ -511,9 +511,9 @@ $(function(){
 
 $(function(){
     var is_iPad = navigator.userAgent.match(/iPad/i) != null;
-    if (is_ipad == true){
+    /*if (is_ipad == true){
         $(".about").attr('background-attachment','scroll')
-    }
+    }*/
 })
 
 
