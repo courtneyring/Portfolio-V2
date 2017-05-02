@@ -172,8 +172,8 @@ $(function(){
         $(".modalPortfolio").attr("aria-labelledby",aria);
         
         var image = data[key].image;
-        $(".modalPortfolio .modal-body .image").css("background","url("+image+") top center/cover no-repeat");
-        //$(".modalPortfolio .modal-body img").attr('src', image);
+        //$(".modalPortfolio .modal-body .image").css("background","url("+image+") top center/cover no-repeat");
+        $(".modalPortfolio .modal-body img").attr('src', image);
         
         var title = data[key].title;
         $(".modalPortfolio .modal-header .title").text(title);

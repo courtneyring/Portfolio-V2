@@ -580,9 +580,13 @@ ul{
     opacity:0.5;
 }
 
-.modal .modal-body .modal-image .image{
-    height:42rem;
+.modal .modal-body .modal-image img{
+    width:100%;
 }
+
+/*.modal .modal-body .modal-image .image{
+    height:42rem;
+}*/
 
 .modal .modal-body .modal-details{
     margin-top:3rem;
