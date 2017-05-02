@@ -278,7 +278,8 @@ ul{
 
 /*About Section*/
 .about{
-    background: url(/assets/images/about-test.jpg) 90% 23%/cover no-repeat;
+    /*background: url(/assets/images/about-test.jpg) 90% 23%/cover no-repeat scroll;*/
+    background: url(/assets/images/about-test.jpg) center/cover no-repeat scroll;
 }
 
 .about h2{
