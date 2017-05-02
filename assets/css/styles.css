@@ -309,6 +309,13 @@ ul{
     background-position: 59% 0%;
 }
 
+@media(min-width:992px){
+    .about{
+        background-size: cover;
+        background-position: center center;
+     }
+}
+
 @media(min-width:1200px){
     .about{
         /*min-height:90vh;*/
