@@ -390,12 +390,6 @@ ul{
     .skills .skill-section{
         display:block;
     }   
-    .skill-section svg{   
-        padding:0rem 1rem 3rem 1rem;
-    }
-    .skills .skills-intro{
-        margin-bottom:1rem;
-    }
     
 }
 
