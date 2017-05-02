@@ -390,9 +390,20 @@ ul{
     .skills .skill-section{
         display:block;
     }   
+    .skill-section svg{
+        padding-bottom:3rem;
+    }
+    
 }
 
 @media(min-width:992px){
+    .skill-section svg{
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
+
+@media(min-width:1200px){
     .skill-section svg{
         padding-left: 8rem;
         padding-right: 3rem;
