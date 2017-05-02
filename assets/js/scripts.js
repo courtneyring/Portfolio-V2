@@ -507,16 +507,6 @@ $(function(){
 
 })
 
-//Device Detect
-
-$(function(){
-    var is_iPad = navigator.userAgent.match(/iPad/i) != null;
-    if (is_ipad == true){
-        /*$(".about").attr('background-position','90% 23%')*/
-        $(".about").attr('background-attachment','scroll')
-    }
-})
-
 
 /*-------Analytics --------*/
                                 
