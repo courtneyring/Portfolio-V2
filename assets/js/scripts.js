@@ -255,7 +255,7 @@ function drawCircle(oldShape){
         threeToOne.y = parseFloat(newShape.pointOne.y-newShape.pointThree.y)
         
         var dString = 
-            "m" + newShape.pointOne.x + " " + newShape.pointOne.y + " " +
+            "m" + parseFloat(newShape.pointOne.x) + " " + newShape.pointOne.y + " " +
             "l" + oneToTwo.x + " " + oneToTwo.y + " " +
             "l" + twoToThree.x + " " + twoToThree.y + " " +
             "a 240 240, 0, 0, 0, " + threeToOne.x + " " + threeToOne.y
