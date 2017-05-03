@@ -259,9 +259,9 @@ function drawCircle(oldShape){
             "l" + oneToTwo.x + " " + oneToTwo.y + " " +
             "l" + twoToThree.x + " " + twoToThree.y + " " +
             "a 240 240, 0, 0, 0, " + threeToOne.x + " " + threeToOne.y
-        
+        console.log(dString)
        $(this).attr('d', dString);
-          console.log("here")
+          
         oldShape = newShape;
     })    
 }
