@@ -224,10 +224,8 @@ function calculateRotation(rotation, oldCoords, cx, cy){
     return newCoords
 }
 
-function drawCircle(oldShapewtf){
-    var oldShape = new Object();
-    oldShape = oldShapewtf;
-    
+function drawCircle(oldShape){
+
       $(".skill-section .shapes path").each(function(){
         
         var newShape = {
@@ -240,6 +238,7 @@ function drawCircle(oldShapewtf){
         newShape.pointOne.x = oldShape.pointThree.x
         newShape.pointOne.y = oldShape.pointThree.y
         
+        console.log(typeof(oldShape.pointThree.x))
         console.log(parseInt(oldShape.pointThree.x))
         
         newShape.pointTwo = calculateRotation(60, oldShape.pointTwo, 240,240)
