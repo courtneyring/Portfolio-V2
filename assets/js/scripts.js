@@ -217,7 +217,7 @@ function calculateRotation(rotation, oldCoords, cx, cy){
     var s = Math.sin(r)
     var c = Math.cos(r)
     
-    newCoords = new Object();
+    var newCoords = new Object();
     newCoords.x = c*(oldCoords.x-cx) + s*(oldCoords.y-cy) + cx;
     newCoords.y = -s*(oldCoords.x-cx) + c*(oldCoords.y-cy) + cy;
     
@@ -306,7 +306,7 @@ function generateSkillsCircle (){
     labelCoords.x = parseFloat($(".skill-section .labels foreignObject:first-child").attr("x"))+65
     labelCoords.y = parseFloat($(".skill-section .labels foreignObject:first-child").attr("y"))+50
     
-    console.log(labelCoords.x);
+    
     drawLabels(labelCoords, 60)
     
     
