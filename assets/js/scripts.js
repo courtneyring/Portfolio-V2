@@ -239,7 +239,7 @@ function drawCircle(oldShape){
         newShape.pointOne.y = oldShape.pointThree.y
         
         console.log(typeof(oldShape.pointThree.x))
-        console.log(parseInt(oldShape.pointThree.x))
+        console.log(oldShape.pointThree.x)
         
         newShape.pointTwo = calculateRotation(60, oldShape.pointTwo, 240,240)
         
@@ -261,10 +261,10 @@ function drawCircle(oldShape){
         console.log(newShape.pointOne.x)
         
         var dString = 
-            "m" + parseFloat(newShape.pointOne.x,10) + " " + newShape.pointOne.y + " " +
-            "l" + oneToTwo.x + " " + oneToTwo.y + " " +
-            "l" + twoToThree.x + " " + twoToThree.y + " " +
-            "a 240 240, 0, 0, 0, " + threeToOne.x + " " + threeToOne.y
+            "m " + parseFloat(newShape.pointOne.x,10) + " " + newShape.pointOne.y + " " +
+            "l " + oneToTwo.x + " " + oneToTwo.y + " " +
+            "l " + twoToThree.x + " " + twoToThree.y + " " +
+            "a 240 240 0 0 0 " + threeToOne.x + " " + threeToOne.y
         console.log(dString)
        $(this).attr('d', dString);
           
