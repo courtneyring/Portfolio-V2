@@ -301,6 +301,7 @@ function generateSkillsCircle (){
     oldShape.pointOne.x = parseFloat(coords[0].replace("m",""),10);
     oldShape.pointOne.y = parseFloat(coords[1])
     
+    console.log("coord: "+ coords[0])
     console.log("oldShape:" + oldShape.pointOne.x)
     
     oldShape.pointTwo.x = oldShape.pointOne.x + parseFloat(coords[2].replace("l",""));
