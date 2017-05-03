@@ -261,7 +261,7 @@ function drawCircle(oldShape){
             "a 240 240, 0, 0, 0, " + threeToOne.x + " " + threeToOne.y
         
        $(this).attr('d', dString);
-
+          console.log("here")
         oldShape = newShape;
     })    
 }
