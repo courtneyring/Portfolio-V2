@@ -254,8 +254,10 @@ function drawCircle(oldShape){
         threeToOne.x = parseFloat(newShape.pointOne.x-newShape.pointThree.x)
         threeToOne.y = parseFloat(newShape.pointOne.y-newShape.pointThree.y)
         
+        console.log(newShape.pointOne.x)
+        
         var dString = 
-            "m" + parseFloat(newShape.pointOne.x).toFixed(5) + " " + newShape.pointOne.y + " " +
+            "m" + parseFloat(newShape.pointOne.x,10) + " " + newShape.pointOne.y + " " +
             "l" + oneToTwo.x + " " + oneToTwo.y + " " +
             "l" + twoToThree.x + " " + twoToThree.y + " " +
             "a 240 240, 0, 0, 0, " + threeToOne.x + " " + threeToOne.y
