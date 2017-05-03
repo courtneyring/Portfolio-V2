@@ -235,7 +235,8 @@ function drawCircle(oldShape){
         
         newShape.pointOne.x = oldShape.pointThree.x
         newShape.pointOne.y = oldShape.pointThree.y
-
+        
+        console.log(parseInt(oldShape.pointThree.x))
         
         newShape.pointTwo = calculateRotation(60, oldShape.pointTwo, 240,240)
         
@@ -277,6 +278,8 @@ function drawLabels(labelCoords, rotation){
         
         $(this).attr('x',newCoords.x-65)
         $(this).attr('y',newCoords.y-50)
+        
+        console.log(newCoords.x)
         
         labelCoords = newCoords
     })
