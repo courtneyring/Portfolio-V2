@@ -239,7 +239,7 @@ function drawCircle(oldShape){
         newShape.pointOne.y = oldShape.pointThree.y
         
         console.log(typeof(oldShape.pointThree.x))
-        console.log(oldShape.pointThree.x)
+        console.log(parseFloat(oldShape.pointThree.x,10)
         
         newShape.pointTwo = calculateRotation(60, oldShape.pointTwo, 240,240)
         
