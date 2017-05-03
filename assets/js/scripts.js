@@ -237,9 +237,7 @@ function drawCircle(oldShape){
         
         newShape.pointOne.x = oldShape.pointThree.x
         newShape.pointOne.y = oldShape.pointThree.y
-        
-        console.log(typeof(oldShape.pointThree.x))
-        console.log(parseFloat(oldShape.pointThree.x,10))
+
         
         newShape.pointTwo = calculateRotation(60, oldShape.pointTwo, 240,240)
         
@@ -258,14 +256,13 @@ function drawCircle(oldShape){
         threeToOne.x = parseFloat(newShape.pointOne.x-newShape.pointThree.x)
         threeToOne.y = parseFloat(newShape.pointOne.y-newShape.pointThree.y)
         
-        console.log(newShape.pointOne.x)
         
         var dString = 
             "m " + parseFloat(newShape.pointOne.x,10) + " " + newShape.pointOne.y + " " +
             "l " + oneToTwo.x + " " + oneToTwo.y + " " +
             "l " + twoToThree.x + " " + twoToThree.y + " " +
             "a 240 240 0 0 0 " + threeToOne.x + " " + threeToOne.y
-        console.log(dString)
+
        $(this).attr('d', dString);
           
         oldShape = newShape;
@@ -300,9 +297,7 @@ function generateSkillsCircle (){
     
     oldShape.pointOne.x = parseFloat(coords[1],10);
     oldShape.pointOne.y = parseFloat(coords[2])
-    
-    console.log("coord: "+ coords[1])
-    console.log("oldShape:" + oldShape.pointOne.x)
+
     
     oldShape.pointTwo.x = oldShape.pointOne.x + parseFloat(coords[4].replace("l",""));
     oldShape.pointTwo.y = oldShape.pointOne.y + parseFloat(coords[5]);
