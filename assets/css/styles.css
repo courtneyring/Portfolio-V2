@@ -298,7 +298,29 @@ ul{
 }
 
 
+/*IE Modal*/
+.modal.ie{
+    width:30%;
+    margin:auto;
+}
 
+.modal.ie .modal-dialog{
+    height:38rem;
+    margin-top:5rem;
+}
+
+.modal.ie .modal-body{
+    text-align:center;
+
+}
+
+.modal.ie .modal-body h4{
+        line-height:1.5;
+}
+
+.modal-backdrop.show{
+    opacity:0.8;
+}
 
 /*About Section*/
 .about{
@@ -458,18 +480,22 @@ ul{
 }
 
 
+
+
 @media(min-width:768px){
-     .skills-content .content-section{
+     .skills-content.desktop .content-section{
         display:none;
         margin-left:0rem;
     }
         
-    #content0{
+    .skills-content.desktop #content0{
         display:block;
     }
     .skills-content .content-list{
         margin-top:2rem;
     }
+    
+
 }
 
 @media(min-width:992px){

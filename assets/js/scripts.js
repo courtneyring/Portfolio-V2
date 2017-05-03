@@ -527,6 +527,28 @@ window.addEventListener("orientationchange", function() {
 });
 
 
+//---------IE Handling---------//
+$(function msieversion() {
+
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  
+    {
+        $(".skill-section-mobile").css('display','block');
+        $(".skills-content").removeClass("desktop");
+        $(".skill-section").css('display','none');
+        $(".skills-content").removeClass("col-lg-5")
+        $(".skills-content").addClass("offset-md-3")
+        $(".skills-content").addClass("col-lg-6")
+        $('#ieModal').modal('show');
+        
+    }
+
+    return false;
+})
+
+
 /*-------Analytics --------*/
                                 
 $(".about .about-blurb #resume").on('click', function() {
