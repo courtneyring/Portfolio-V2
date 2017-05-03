@@ -306,7 +306,7 @@ function generateSkillsCircle (){
     labelCoords.x = parseFloat($(".skill-section .labels foreignObject:first-child").attr("x"))+65
     labelCoords.y = parseFloat($(".skill-section .labels foreignObject:first-child").attr("y"))+50
     
-    console.log(labelCoords);
+    console.log(labelCoords.x);
     drawLabels(labelCoords, 60)
     
     
