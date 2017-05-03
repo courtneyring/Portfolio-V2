@@ -245,14 +245,14 @@ function drawCircle(oldShape){
         var twoToThree = new Object();
         var threeToOne = new Object();
         
-        oneToTwo.x = newShape.pointTwo.x-newShape.pointOne.x
-        oneToTwo.y = newShape.pointTwo.y-newShape.pointOne.y
+        oneToTwo.x = parseFloat(newShape.pointTwo.x-newShape.pointOne.x)
+        oneToTwo.y = parseFloat(newShape.pointTwo.y-newShape.pointOne.y)
         
-        twoToThree.x = newShape.pointThree.x-newShape.pointTwo.x
-        twoToThree.y = newShape.pointThree.y-newShape.pointTwo.y
+        twoToThree.x = parseFloat(newShape.pointThree.x-newShape.pointTwo.x)
+        twoToThree.y = parseFloat(newShape.pointThree.y-newShape.pointTwo.y)
         
-        threeToOne.x = newShape.pointOne.x-newShape.pointThree.x
-        threeToOne.y = newShape.pointOne.y-newShape.pointThree.y
+        threeToOne.x = parseFloat(newShape.pointOne.x-newShape.pointThree.x)
+        threeToOne.y = parseFloat(newShape.pointOne.y-newShape.pointThree.y)
         
         var dString = 
             "m" + newShape.pointOne.x + " " + newShape.pointOne.y + " " +
