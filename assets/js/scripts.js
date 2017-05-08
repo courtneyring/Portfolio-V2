@@ -376,6 +376,7 @@ function updateShapeCoords(rotation){
     $(".skills .shapes animateTransform").remove();
     
     updateLabelCoords(rotation)
+    animationCallback();
     
 }
 
@@ -484,18 +485,31 @@ $(".skill-section-mobile .custom-select").change(function(){
 })
 
 
+function animationCallback(){
+    console.log("here")
+    $(".skills .skill-section .labels foreignObject, .skills .skill-section .shapes path").attr("onclick", "clickEvent(this)")
+}
+
 function clickEvent(el){
      //Get Click ID and calculate rotation num
     var category = "label"+(el.id.replace("label",""));
+    
     console.log($('#'+category + " p").text())
     
     ga('send', 'event', 'skills', 'view', $('#'+category + " p").text());  
     
     var id = parseInt(el.id.replace("label",""));
+
+    if (id==0){
+        return;
+    }
+    
+    
+     $(".skills .skill-section .labels foreignObject, .skills .skill-section .shapes path").removeAttr("onclick")
     
 
     if (id===0){return;}
-    var rotation = parseInt(6-id);
+    var rotation = parseInt(6-id);;
     
    //Create Rotation Animation, inject into DOM
     var rotationAnimation = createRotation(rotation);
@@ -511,8 +525,10 @@ function clickEvent(el){
     })
     displaySkill(id, rotation)
     rotationAnimation.beginElement(); 
+
     
 }
+
 
 
 
