@@ -427,6 +427,10 @@ ul{
         padding-left: 8rem;
         padding-right: 3rem;
     }
+    
+    .skill-section foreignObject p{
+        font-size:2rem;
+    }
 }
 
 /*Skills Section - Selector Mobile*/
@@ -478,6 +482,7 @@ ul{
 .skills-content br{
     line-height:4rem;
 }
+
 
 
 
