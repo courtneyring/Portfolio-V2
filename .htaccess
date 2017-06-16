@@ -1,6 +1,2 @@
 
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^courtney\-ring\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.courtney\-ring\.com$
-RewriteRule ^/?$ "http\:\/\/www\.courtney\-ring\.com\/under\-construction\.html" [R=301,L]
 
