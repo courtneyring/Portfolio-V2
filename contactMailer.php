@@ -3,7 +3,7 @@
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
-    $captcha - $_POST['g-recaptcha-response']
+    $captcha - $_POST['g-recaptcha-response'];
 
     if(!$captcha){
           echo '<h2>Please check the the captcha form.</h2>';
