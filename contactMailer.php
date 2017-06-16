@@ -1,25 +1,28 @@
 <?php
- require_once "recaptchalib.php";
 
-            // your secret key
-        $secret = "6LcePAATAAAAABjXaTsy7gwcbnbaF5XgJKwjSNwT";
-
-        // empty response
-        $response = null;
-
-        // check secret key
-        $reCaptcha = new ReCaptcha($secret);
-
-        if ($_POST["g-recaptcha-response"]) {
-        $response = $reCaptcha->verifyResponse(
-            $_SERVER["REMOTE_ADDR"],
-            $_POST["g-recaptcha-response"]
-        );
-    }
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
+    $captcha - $_POST['g-recaptcha-response']
 
+    if(!$captcha){
+        if(!$captcha){
+          echo '<h2>Please check the the captcha form.</h2>';
+          exit;
+        }
+    }
+
+    $secretKey = "6LeyoiUUAAAAACOQvKdCqAl0ZuPWyR3vRrd_Rjby";
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
+    $responseKeys = json_decode($response,true);
+    if(intval($responseKeys["success"]) !== 1) {
+          echo '<h2>You are spammer ! Get the @$%K out</h2>';
+    } else {
+          echo '<h2>Thanks for posting comment.</h2>';
+        }
+
+        
    // $from = 'hello@crawfordcountyhistoricalsociety.com';
     $to = '"Courtney-Ring.com" <ce.ring@comcast.net>';
     //$to = "ce.ring@comcast.net";
@@ -43,7 +46,5 @@
     }
 
 ?>
-
-
 
 
