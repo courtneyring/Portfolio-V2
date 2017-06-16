@@ -6,10 +6,8 @@
     $captcha - $_POST['g-recaptcha-response']
 
     if(!$captcha){
-        if(!$captcha){
           echo '<h2>Please check the the captcha form.</h2>';
           exit;
-        }
     }
 
     $secretKey = "6LeyoiUUAAAAACOQvKdCqAl0ZuPWyR3vRrd_Rjby";
