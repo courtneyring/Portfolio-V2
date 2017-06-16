@@ -5,7 +5,7 @@
     $message = $_POST['message'];
     $captcha - $_POST['g-recaptcha-response'];
 
-    if(!$captcha){
+    /*if(!$captcha){
           echo '<h2>Please check the the captcha form.</h2>';
           exit;
     }
@@ -18,7 +18,7 @@
           echo '<h2>You are spammer ! Get the @$%K out</h2>';
     } else {
           echo '<h2>Thanks for posting comment.</h2>';
-        }
+        }*/
 
         
    // $from = 'hello@crawfordcountyhistoricalsociety.com';
