@@ -3,7 +3,7 @@
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
-/*   // $from = 'hello@crawfordcountyhistoricalsociety.com';
+   // $from = 'hello@crawfordcountyhistoricalsociety.com';
     $to = '"Courtney-Ring.com" <ce.ring@comcast.net>';
     //$to = "ce.ring@comcast.net";
     $subject = 'New Message from Courtney-Ring.com';
@@ -21,5 +21,5 @@
             echo "Error. Please go back and try again.";
           
         }
-    }*/
+    }
 ?>
