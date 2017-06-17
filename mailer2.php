@@ -33,4 +33,7 @@
 
             }
         }
+    else:
+            $errMsg = 'Robot verification failed, please try again.';
+    endif;
 ?>
