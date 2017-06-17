@@ -3,8 +3,8 @@
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
-    $captcha = $_POST['g-recaptcha-response']
-    $secret = '6Le3yiUUAAAAAKolNqd7JlRYVTD93lmRNzxNd9Qu'
+    $captcha = $_POST['g-recaptcha-response'];
+    $secret = '6Le3yiUUAAAAAKolNqd7JlRYVTD93lmRNzxNd9Qu';
         
         
         
