@@ -580,3 +580,11 @@ $(".contact .info a").on('click', function() {
     console.log($(this).attr('id'))
     ga('send', 'event', 'contact', $(this).attr('id'));  
 })
+
+
+
+/*----------ReCaptcha----------*/
+function recaptchaCallback() {
+    $('.submit').removeClass('disabled');
+    $('.submit').removeAttr('disabled');
+};

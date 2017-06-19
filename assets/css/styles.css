@@ -817,6 +817,9 @@ ul{
     margin-top: 1rem;
 }
 
+.contact .form .submit.disabled{
+    background-color:rgb(192, 192, 192);
+}
 
 /*Footer*/
 .footer{
