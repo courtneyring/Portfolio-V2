@@ -10,7 +10,7 @@
         
     $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$captcha);
     $responseData = json_decode($verifyResponse);
-    if($responseData->success):
+    if($responseData->success){
 
        // $from = 'hello@crawfordcountyhistoricalsociety.com';
         $to = '"Courtney-Ring.com" <ce.ring@comcast.net>';
@@ -33,7 +33,8 @@
 
             }
         }
-    else:
+    }
+    else{
             $errMsg = 'Robot verification failed, please try again.';
-    endif;
+    }
 ?>
