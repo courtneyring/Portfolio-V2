@@ -342,12 +342,12 @@ ul{
 
 .about-blurb{
     color:white;
-    background-color:rgba(52, 52, 52, 0.75);
+    background-color:rgba(52, 52, 52, 0.9);
     padding:1rem;
-    box-shadow: 2rem 2rem 4.5rem rgba(52, 52, 52, 0.5),
-        2rem -2rem 4.5rem rgba(52, 52, 52, 0.5),
-        -2rem -2rem 4.5rem rgba(52, 52, 52, 0.5),
-        -2rem 2rem 4.5rem rgba(52, 52, 52, 0.5);
+    box-shadow: 2rem 2rem 4.5rem rgba(52, 52, 52, 0.9),
+        2rem -2rem 4.5rem rgba(52, 52, 52, 0.9),
+        -2rem -2rem 4.5rem rgba(52, 52, 52, 0.9),
+        -2rem 2rem 4.5rem rgba(52, 52, 52, 0.9);
     border-radius: .7rem;
 }
 
