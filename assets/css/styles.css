@@ -384,9 +384,11 @@ ul{
 }
 
 /*Skills Section - Selector Desktop*/
+
 .skills .skill-section{
     display:none;
 }
+
 
 .skills .skill-section svg{
     width:100%;
@@ -404,16 +406,14 @@ ul{
     vertical-align:middle;
 }
 
-/*.skills .skill-section .shapes{
-    display:none;
-}*/
 
+/*Readd this for skills circle
 @media(min-width:768px){
     .skills .skill-section{
         display:block;
     }   
     
-}
+}*/
 
 @media(min-width:992px){
     .skill-section svg{
@@ -432,6 +432,12 @@ ul{
         font-size:2rem;
     }
 }
+
+/* Leave this commented
+.skills .skill-section .shapes{
+    display:none;
+}*/
+
 
 /*Skills Section - Selector Mobile*/
 .skill-section-mobile .custom-select{
@@ -463,12 +469,13 @@ ul{
     border:0px;
 }
 
+/* Re-Add this for skills cirlce
 @media(min-width:768px){
     .skill-section-mobile{
         display:none;
     }
 
-}
+}*/
 
 
 
@@ -486,7 +493,7 @@ ul{
 
 
 
-
+/* Readd this for skills circle:
 @media(min-width:768px){
      .skills-content.desktop .content-section{
         display:none;
@@ -507,7 +514,7 @@ ul{
      .skills-content .content-list{
         margin-top:4rem;
     }
-}
+}*/
 
 
 /*Portfolio Section*/

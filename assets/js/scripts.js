@@ -47,7 +47,7 @@ $(function(){
 $(function(){
     $(window).on("activate.bs.scrollspy", function(){
         var activePage = $(".nav-link.active").text();
-        console.log(activePage)
+
         ga('send', 'pageview', activePage);
     })
 })
@@ -195,7 +195,7 @@ $(function(){
         var website = data[key].website;
 
         if (!website){
-            console.log("here")
+
             $(".modalPortfolio .modal-body .website").parent().parent().css('display','none')
         }
         else{
@@ -335,7 +335,7 @@ function updateLabelCoords(rotation){
     $(".skills .labels animateMotion").remove()
    
     var oldCoords = labelLookup()
-    console.log(oldCoords)
+
     
     $(".skills .skill-section .labels foreignObject").each(function(){
 
@@ -434,7 +434,7 @@ function createTranslation(rotation, oldCoords, id){
 
     var Origin = oldCoords[id]
     var Destination = oldCoords[parseFloat(id+rotation)%6]
-
+    console.log("X"+Destination.x+","+"Y: "+Destination.y)
     var animation = document.createElementNS(
                          'http://www.w3.org/2000/svg', 'animateMotion');
     animation.setAttributeNS(null,'dur', '2s');
@@ -486,7 +486,7 @@ $(".skill-section-mobile .custom-select").change(function(){
 
 
 function animationCallback(){
-    console.log("here")
+
     $(".skills .skill-section .labels foreignObject, .skills .skill-section .shapes path").attr("onclick", "clickEvent(this)")
 }
 
@@ -494,7 +494,6 @@ function clickEvent(el){
      //Get Click ID and calculate rotation num
     var category = "label"+(el.id.replace("label",""));
     
-    console.log($('#'+category + " p").text())
     
     ga('send', 'event', 'skills', 'view', $('#'+category + " p").text());  
     
@@ -509,7 +508,7 @@ function clickEvent(el){
     
 
     if (id===0){return;}
-    var rotation = parseInt(6-id);;
+    var rotation = parseInt(6-id);
     
    //Create Rotation Animation, inject into DOM
     var rotationAnimation = createRotation(rotation);
@@ -572,12 +571,12 @@ $(".about .about-blurb #resume").on('click', function() {
 })
 
 $(".about .about-blurb a:not(#resume)").on('click', function() {
-    console.log($(this).attr('href'))
+
     ga('send', 'event', 'about', 'link', $(this).attr('href'));  
 })
                                     
 $(".contact .info a").on('click', function() {
-    console.log($(this).attr('id'))
+
     ga('send', 'event', 'contact', $(this).attr('id'));  
 })
 
